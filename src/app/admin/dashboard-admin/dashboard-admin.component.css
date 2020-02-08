@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif|Oswald&display=swap');
+
+.bs-example {
+  margin: 20px;
+  margin-top: 100px;
+}
+
+th {
+  font-family: 'Oswald', sans-serif;
+  font-family: 'Noto Serif', serif;
+  background-color: #36b66f;
+  color: #FFFFFF;
+}
+
+.plusIcon {
+  color: #36b66f;
+}
+
+.plusIcon:hover {
+  color: #b64a52;
+}

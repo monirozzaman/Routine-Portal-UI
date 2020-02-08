@@ -10,6 +10,8 @@ import {AddFacultiesComponent} from './admin/add-faculties/add-faculties.compone
 import {FacultiesListComponent} from './admin/faculties-list/faculties-list.component';
 import {ProfileComponent} from './profile/profile.component';
 import {DashboardAdminComponent} from './admin/dashboard-admin/dashboard-admin.component';
+import {DashboardAdminService} from "./services/dashboard.admin.service";
+import {AccessControlComponent} from './admin/access-control/access-control.component';
 
 
 @NgModule({
@@ -21,14 +23,15 @@ import {DashboardAdminComponent} from './admin/dashboard-admin/dashboard-admin.c
     AddFacultiesComponent,
     FacultiesListComponent,
     ProfileComponent,
-    DashboardAdminComponent
+    DashboardAdminComponent,
+    AccessControlComponent
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [DashboardAdminService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,1 +1,138 @@
-<p>dashboard-admin works!</p>
+<div class="bs-example">
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th class="text-center" colspan="13">Saturday</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr>
+      <th>Time Slot /Room No</th>
+      <th>8:30 - 10:00</th>
+      <th>FM</th>
+      <th>10:00 - 11:30</th>
+      <th>FM</th>
+      <th>11:30 - 01:00</th>
+      <th>FM</th>
+      <th>01:00 - 2:30</th>
+      <th>FM</th>
+      <th>2:30 - 4:00</th>
+      <th>FM</th>
+      <th>4:00 - 5:30</th>
+      <th>FM</th>
+    </tr>
+    <tr>
+      <td>AB4-514<br>(SWE-Lab)</td>
+
+      <td *ngFor="let a of saturdayClassRoomDetails">
+        {{ a.ab4_514 }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.ab4_514"><i class="fas fa-plus-circle plusIcon"></i></a>
+      </td>
+    </tr>
+    <tr>
+      <td>AB4-204</td>
+      <td *ngFor="let a of saturdayClassRoomDetails">
+        {{ a.ab4_204 }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.ab4_204"><i class="fas fa-plus-circle plusIcon"></i></a>
+      </td>
+    </tr>
+    <tr>
+      <td>AB4-503</td>
+      <td *ngFor="let a of saturdayClassRoomDetails">
+        {{ a.ab4_503 }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.ab4_503"><i class="fas fa-plus-circle plusIcon"></i></a>
+      </td>
+    </tr>
+    <tr>
+      <td>AB4-602</td>
+      <td *ngFor="let a of saturdayClassRoomDetails">
+        {{ a.ab4_602 }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.ab4_602"><i class="fas fa-plus-circle plusIcon"></i></a>
+      </td>
+    </tr>
+    <tr>
+      <td>AB4-604</td>
+      <td *ngFor="let a of saturdayClassRoomDetails">
+        {{ a.ab4_604 }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.ab4_604"><i class="fas fa-plus-circle plusIcon"></i></a>
+      </td>
+    </tr>
+    <tr>
+      <td>AB1-103</td>
+      <td *ngFor="let a of saturdayClassRoomDetails">
+        {{ a.ab4_103 }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.ab4_103"><i class="fas fa-plus-circle plusIcon"></i></a>
+      </td>
+    </tr>
+    </tbody>
+
+
+    <thead>
+    <tr>
+      <th class="text-center" colspan="13">Sunday</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr>
+      <th>Time Slot /Room No</th>
+      <th>8:30 - 10:00</th>
+      <th>FM</th>
+      <th>10:00 - 11:30</th>
+      <th>FM</th>
+      <th>11:30 - 01:00</th>
+      <th>FM</th>
+      <th>01:00 - 2:30</th>
+      <th>FM</th>
+      <th>2:30 - 4:00</th>
+      <th>FM</th>
+      <th>4:00 - 5:30</th>
+      <th>FM</th>
+    </tr>
+    <tr>
+      <td>AB4-514<br>(SWE-Lab)</td>
+
+      <td *ngFor="let a of sundayClassRoomDetails">
+        {{ a.ab4_514 }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.ab4_514"><i class="fas fa-plus-circle plusIcon"></i></a>
+      </td>
+    </tr>
+    <tr>
+      <td>AB4-204</td>
+      <td *ngFor="let a of saturdayClassRoomDetails">
+        {{ a.ab4_204 }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.ab4_204"><i class="fas fa-plus-circle plusIcon"></i></a>
+      </td>
+    </tr>
+    <tr>
+      <td>AB4-503</td>
+      <td *ngFor="let a of saturdayClassRoomDetails">
+        {{ a.ab4_503 }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.ab4_503"><i class="fas fa-plus-circle plusIcon"></i></a>
+      </td>
+    </tr>
+    <tr>
+      <td>AB4-602</td>
+      <td *ngFor="let a of saturdayClassRoomDetails">
+        {{ a.ab4_602 }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.ab4_602"><i class="fas fa-plus-circle plusIcon"></i></a>
+      </td>
+    </tr>
+    <tr>
+      <td>AB4-604</td>
+      <td *ngFor="let a of saturdayClassRoomDetails">
+        {{ a.ab4_604 }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.ab4_604"><i class="fas fa-plus-circle plusIcon"></i></a>
+      </td>
+    </tr>
+    <tr>
+      <td>AB1-103</td>
+      <td *ngFor="let a of saturdayClassRoomDetails">
+        {{ a.ab4_103 }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.ab4_103"><i class="fas fa-plus-circle plusIcon"></i></a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

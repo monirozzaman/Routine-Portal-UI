@@ -1,14 +1,14 @@
 <div class="sidebar" data-color="green" data-background-color="white" >
 
   <div class="logo">
-    <h2 class="text-center diu_routine_portal_text">Routine Portal</h2>
+    <h2 class="text-center diu_routine_portal_text"><span style="color: red">Routine</span> Portal</h2>
   </div>
 <div class="sidebar-wrapper">
   <ul class="nav">
     <li class="nav-item">
       <a class="nav-link" [routerLink]="['admin']">
         <i class="material-icons">dashboard</i>
-        <p class="text-black-50">Dashboard</p>
+        <p class="text-black-50">Class Routine</p>
       </a>
     </li>
     <li class="nav-item">
@@ -30,9 +30,9 @@
       </a>
     </li>
     <li class="nav-item ">
-      <a class="nav-link" [routerLink]="['profile']">
-        <i class="material-icons">notifications</i>
-        <p>Notifications</p>
+      <a [routerLink]="['access-control']" class="nav-link">
+        <i class="fas fa-universal-access"></i>
+        <p>Access Control</p>
       </a>
     </li>
     <li class="nav-item ">

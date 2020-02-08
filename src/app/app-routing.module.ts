@@ -6,6 +6,7 @@ import {ProfileComponent} from "./profile/profile.component";
 import {DashboardAdminComponent} from "./admin/dashboard-admin/dashboard-admin.component";
 import {AddFacultiesComponent} from "./admin/add-faculties/add-faculties.component";
 import {FacultiesListComponent} from "./admin/faculties-list/faculties-list.component";
+import {AccessControlComponent} from "./admin/access-control/access-control.component";
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
       {path: 'admin', component: DashboardAdminComponent},
       {path: 'add-faculties', component: AddFacultiesComponent},
       {path: 'faculties-list', component: FacultiesListComponent},
+      {path: 'access-control', component: AccessControlComponent},
 
     ]
   }
