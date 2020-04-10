@@ -8,427 +8,2805 @@ export class DashboardAdminService {
 
   public getClassRoomDateAndTime(): Observable<any> {
 
-    const json = [{
-      "saturday": [{
-        "ab4_514": "",
-        "ab4_204": "L3T2 SWE333 PC-A",
-        "ab4_503": "L3T2 SWE333 PC-A",
-        "ab4_602": "L3T2 SWE333 PC-A",
-        "ab4_604": "L3T2 SWE333 PC-A",
-        "ab4_103": "L3T2 SWE333 PC-A"
-      },
-
-        {
-          "ab4_514": "MM",
-          "ab4_204": "MM",
-          "ab4_503": "MM",
-          "ab4_602": "MM",
-          "ab4_604": "MM",
-          "ab4_103": "MM"
-        },
-        {
-          "ab4_514": "L4T1 SWE426 PC-A1",
-          "ab4_204": "L3T2 SWE333 PC-A",
-          "ab4_503": "L3T2 SWE333 PC-A",
-          "ab4_602": "",
-          "ab4_604": "L3T2 SWE333 PC-A",
-          "ab4_103": "L3T2 SWE333 PC-A"
-        },
-        {
-          "ab4_514": "MM",
-          "ab4_204": "MM",
-          "ab4_503": "MM",
-          "ab4_602": "MM",
-          "ab4_604": "MM",
-          "ab4_103": "MM"
-        },
-        {
-          "ab4_514": "L4T1 SWE423 PC-B",
-          "ab4_204": "L3T2 SWE333 PC-A",
-          "ab4_503": "L3T2 SWE333 PC-A",
-          "ab4_602": "L3T2 SWE333 PC-A",
-          "ab4_604": "L3T2 SWE333 PC-A",
-          "ab4_103": "L3T2 SWE333 PC-A"
-        },
-        {
-          "ab4_514": "MM",
-          "ab4_204": "MM",
-          "ab4_503": "MM",
-          "ab4_602": "MM",
-          "ab4_604": "MM",
-          "ab4_103": "MM"
-        },
-        {
-          "ab4_514": "Not Occupied",
-          "ab4_204": "L3T2 SWE333 PC-A",
-          "ab4_503": "L3T2 SWE333 PC-A",
-          "ab4_602": "L3T2 SWE333 PC-A",
-          "ab4_604": "L3T2 SWE333 PC-A",
-          "ab4_103": "L3T2 SWE333 PC-A"
-        },
-        {
-          "ab4_514": "",
-          "ab4_204": "MM",
-          "ab4_503": "MM",
-          "ab4_602": "MM",
-          "ab4_604": "MM",
-          "ab4_103": "MM"
-        },
-        {
-          "ab4_514": "Not Occupied",
-          "ab4_204": "L3T2 SWE333 PC-A",
-          "ab4_503": "L3T2 SWE333 PC-A",
-          "ab4_602": "L3T2 SWE333 PC-A",
-          "ab4_604": "L3T2 SWE333 PC-A",
-          "ab4_103": "L3T2 SWE333 PC-A"
-        },
-        {
-          "ab4_514": "",
-          "ab4_204": "MM",
-          "ab4_503": "MM",
-          "ab4_602": "MM",
-          "ab4_604": "MM",
-          "ab4_103": "MM"
-        },
-        {
-          "ab4_514": "ALL >SWE-CPS >PC-A",
-          "ab4_204": "L3T2 SWE333 PC-A",
-          "ab4_503": "L3T2 SWE333 PC-A",
-          "ab4_602": "L3T2 SWE333 PC-A",
-          "ab4_604": "L3T2 SWE333 PC-A",
-          "ab4_103": "L3T2 SWE333 PC-A"
-        },
-        {
-          "ab4_514": "MM",
-          "ab4_204": "MM",
-          "ab4_503": "MM",
-          "ab4_602": "MM",
-          "ab4_604": "MM",
-          "ab4_103": "MM"
-        }
-      ]
-    },
+    const json =
       {
-        "sunday": [{
-          "ab4_514": "",
-          "ab4_204": "L3T2 SWE333 PC-A",
-          "ab4_503": "L3T2 SWE333 PC-A",
-          "ab4_602": "L3T2 SWE333 PC-A",
-          "ab4_604": "L3T2 SWE333 PC-A",
-          "ab4_103": "L3T2 SWE333 PC-A"
-        },
+        "routineId": "f04cf728-4e44-457d-b9a3-677a11436547",
+        "routineVersion": "v1.0",
+        "routinePublisherId": "fdgfdgfdg",
+        "routineSession": "Spring-2020",
+        "routinePublishDate": "01-02-2020",
+        "routineEffectiveDate": "01-02-2020",
+        "days": [
           {
-            "ab4_514": "MM",
-            "ab4_204": "MM",
-            "ab4_503": "MM",
-            "ab4_602": "MM",
-            "ab4_604": "MM",
-            "ab4_103": "MM"
-          },
-          {
-            "ab4_514": "L4T1\n SWE426 PC-A1",
-            "ab4_204": "L3T2 SWE333 PC-A",
-            "ab4_503": "L3T2 SWE333 PC-A",
-            "ab4_602": "",
-            "ab4_604": "L3T2 SWE333 PC-A",
-            "ab4_103": "L3T2 SWE333 PC-A"
-          },
-          {
-            "ab4_514": "MM",
-            "ab4_204": "MM",
-            "ab4_503": "MM",
-            "ab4_602": "MM",
-            "ab4_604": "MM",
-            "ab4_103": "MM"
-          },
-          {
-            "ab4_514": "L4T1\n SWE423 PC-B",
-            "ab4_204": "L3T2 SWE333 PC-A",
-            "ab4_503": "L3T2 SWE333 PC-A",
-            "ab4_602": "L3T2 SWE333 PC-A",
-            "ab4_604": "L3T2 SWE333 PC-A",
-            "ab4_103": "L3T2 SWE333 PC-A"
-          },
-          {
-            "ab4_514": "MM",
-            "ab4_204": "MM",
-            "ab4_503": "MM",
-            "ab4_602": "MM",
-            "ab4_604": "MM",
-            "ab4_103": "MM"
-          },
-          {
-            "ab4_514": "Not Occupied",
-            "ab4_204": "L3T2 SWE333 PC-A",
-            "ab4_503": "L3T2 SWE333 PC-A",
-            "ab4_602": "L3T2 SWE333 PC-A",
-            "ab4_604": "L3T2 SWE333 PC-A",
-            "ab4_103": "L3T2 SWE333 PC-A"
-          },
-          {
-            "ab4_514": "",
-            "ab4_204": "MM",
-            "ab4_503": "MM",
-            "ab4_602": "MM",
-            "ab4_604": "MM",
-            "ab4_103": "MM"
-          },
-          {
-            "ab4_514": "Not Occupied",
-            "ab4_204": "L3T2 SWE333 PC-A",
-            "ab4_503": "L3T2 SWE333 PC-A",
-            "ab4_602": "L3T2 SWE333 PC-A",
-            "ab4_604": "L3T2 SWE333 PC-A",
-            "ab4_103": "L3T2 SWE333 PC-A"
-          },
-          {
-            "ab4_514": "",
-            "ab4_204": "MM",
-            "ab4_503": "MM",
-            "ab4_602": "MM",
-            "ab4_604": "MM",
-            "ab4_103": "MM"
-          },
-          {
-            "ab4_514": "ALL >SWE-CPS >PC-A",
-            "ab4_204": "L3T2 SWE333 PC-A",
-            "ab4_503": "L3T2 SWE333 PC-A",
-            "ab4_602": "L3T2 SWE333 PC-A",
-            "ab4_604": "L3T2 SWE333 PC-A",
-            "ab4_103": "L3T2 SWE333 PC-A"
-          },
-          {
-            "ab4_514": "MM",
-            "ab4_204": "MM",
-            "ab4_503": "MM",
-            "ab4_602": "MM",
-            "ab4_604": "MM",
-            "ab4_103": "MM"
-          }
-        ]
-      },
-      {
-        "monday": [{
-          "ab4_514": "L3T2 SWE333 PC-A",
-          "ab4_204": "L3T2 SWE333 PC-A",
-          "ab4_503": "L3T2 SWE333 PC-A",
-          "ab4_602": "L3T2 SWE333 PC-A",
-          "ab4_604": "L3T2 SWE333 PC-A",
-          "ab4_103": "L3T2 SWE333 PC-A"
-        },
-          {
-            "ab4_514": "MM",
-            "ab4_204": "MM",
-            "ab4_503": "MM",
-            "ab4_602": "MM",
-            "ab4_604": "MM",
-            "ab4_103": "MM"
-          },
-          {
-            "ab4_514": "L3T2 SWE333 PC-A",
-            "ab4_204": "L3T2 SWE333 PC-A",
-            "ab4_503": "L3T2 SWE333 PC-A",
-            "ab4_602": "L3T2 SWE333 PC-A",
-            "ab4_604": "L3T2 SWE333 PC-A",
-            "ab4_103": "L3T2 SWE333 PC-A"
-          },
-          {
-            "ab4_514": "MM",
-            "ab4_204": "MM",
-            "ab4_503": "MM",
-            "ab4_602": "MM",
-            "ab4_604": "MM",
-            "ab4_103": "MM"
-          },
-          {
-            "ab4_514": "L3T2 SWE333 PC-A",
-            "ab4_204": "L3T2 SWE333 PC-A",
-            "ab4_503": "L3T2 SWE333 PC-A",
-            "ab4_602": "L3T2 SWE333 PC-A",
-            "ab4_604": "L3T2 SWE333 PC-A",
-            "ab4_103": "L3T2 SWE333 PC-A"
-          },
-
-          {
-            "ab4_514": "L3T2 SWE333 PC-A",
-            "ab4_204": "L3T2 SWE333 PC-A",
-            "ab4_503": "L3T2 SWE333 PC-A",
-            "ab4_602": "L3T2 SWE333 PC-A",
-            "ab4_604": "L3T2 SWE333 PC-A",
-            "ab4_103": "L3T2 SWE333 PC-A"
-          },
-          {
-            "ab4_514": "L3T2 SWE333 PC-A",
-            "ab4_204": "L3T2 SWE333 PC-A",
-            "ab4_503": "L3T2 SWE333 PC-A",
-            "ab4_602": "L3T2 SWE333 PC-A",
-            "ab4_604": "L3T2 SWE333 PC-A",
-            "ab4_103": "L3T2 SWE333 PC-A"
-          },
-          {
-            "ab4_514": "L3T2 SWE333 PC-A",
-            "ab4_204": "L3T2 SWE333 PC-A",
-            "ab4_503": "L3T2 SWE333 PC-A",
-            "ab4_602": "L3T2 SWE333 PC-A",
-            "ab4_604": "L3T2 SWE333 PC-A",
-            "ab4_103": "L3T2 SWE333 PC-A"
-          }
-        ]
-      },
-      {
-        "tuesday": [{
-          "ab4_514": "L3T2 SWE333 PC-A",
-          "ab4_204": "L3T2 SWE333 PC-A",
-          "ab4_503": "L3T2 SWE333 PC-A",
-          "ab4_602": "L3T2 SWE333 PC-A",
-          "ab4_604": "L3T2 SWE333 PC-A",
-          "ab4_103": "L3T2 SWE333 PC-A"
-        },
-          {
-            "ab4_514": "L3T2 SWE333 PC-A",
-            "ab4_204": "L3T2 SWE333 PC-A",
-            "ab4_503": "L3T2 SWE333 PC-A",
-            "ab4_602": "L3T2 SWE333 PC-A",
-            "ab4_604": "L3T2 SWE333 PC-A",
-            "ab4_103": "L3T2 SWE333 PC-A"
-          },
-          {
-            "ab4_514": "L3T2 SWE333 PC-A",
-            "ab4_204": "L3T2 SWE333 PC-A",
-            "ab4_503": "L3T2 SWE333 PC-A",
-            "ab4_602": "L3T2 SWE333 PC-A",
-            "ab4_604": "L3T2 SWE333 PC-A",
-            "ab4_103": "L3T2 SWE333 PC-A"
-          },
-          {
-            "ab4_514": "L3T2 SWE333 PC-A",
-            "ab4_204": "L3T2 SWE333 PC-A",
-            "ab4_503": "L3T2 SWE333 PC-A",
-            "ab4_602": "L3T2 SWE333 PC-A",
-            "ab4_604": "L3T2 SWE333 PC-A",
-            "ab4_103": "L3T2 SWE333 PC-A"
-          },
-          {
-            "ab4_514": "L3T2 SWE333 PC-A",
-            "ab4_204": "L3T2 SWE333 PC-A",
-            "ab4_503": "L3T2 SWE333 PC-A",
-            "ab4_602": "L3T2 SWE333 PC-A",
-            "ab4_604": "L3T2 SWE333 PC-A",
-            "ab4_103": "L3T2 SWE333 PC-A"
-          },
-          {
-            "ab4_514": "L3T2 SWE333 PC-A",
-            "ab4_204": "L3T2 SWE333 PC-A",
-            "ab4_503": "L3T2 SWE333 PC-A",
-            "ab4_602": "L3T2 SWE333 PC-A",
-            "ab4_604": "L3T2 SWE333 PC-A",
-            "ab4_103": "L3T2 SWE333 PC-A"
-          }
-        ]
-      },
-      {
-        "wednesday": [{
-          "ab4_514": "L3T2 SWE333 PC-A",
-          "ab4_204": "L3T2 SWE333 PC-A",
-          "ab4_503": "L3T2 SWE333 PC-A",
-          "ab4_602": "L3T2 SWE333 PC-A",
-          "ab4_604": "L3T2 SWE333 PC-A",
-          "ab4_103": "L3T2 SWE333 PC-A"
-        },
-          {
-            "ab4_514": "L3T2 SWE333 PC-A",
-            "ab4_204": "L3T2 SWE333 PC-A",
-            "ab4_503": "L3T2 SWE333 PC-A",
-            "ab4_602": "L3T2 SWE333 PC-A",
-            "ab4_604": "L3T2 SWE333 PC-A",
-            "ab4_103": "L3T2 SWE333 PC-A"
-          },
-          {
-            "ab4_514": "L3T2 SWE333 PC-A",
-            "ab4_204": "L3T2 SWE333 PC-A",
-            "ab4_503": "L3T2 SWE333 PC-A",
-            "ab4_602": "L3T2 SWE333 PC-A",
-            "ab4_604": "L3T2 SWE333 PC-A",
-            "ab4_103": "L3T2 SWE333 PC-A"
-          },
-          {
-            "ab4_514": "L3T2 SWE333 PC-A",
-            "ab4_204": "L3T2 SWE333 PC-A",
-            "ab4_503": "L3T2 SWE333 PC-A",
-            "ab4_602": "L3T2 SWE333 PC-A",
-            "ab4_604": "L3T2 SWE333 PC-A",
-            "ab4_103": "L3T2 SWE333 PC-A"
-          },
-          {
-            "ab4_514": "L3T2 SWE333 PC-A",
-            "ab4_204": "L3T2 SWE333 PC-A",
-            "ab4_503": "L3T2 SWE333 PC-A",
-            "ab4_602": "L3T2 SWE333 PC-A",
-            "ab4_604": "L3T2 SWE333 PC-A",
-            "ab4_103": "L3T2 SWE333 PC-A"
-          },
-          {
-            "ab4_514": "L3T2 SWE333 PC-A",
-            "ab4_204": "L3T2 SWE333 PC-A",
-            "ab4_503": "L3T2 SWE333 PC-A",
-            "ab4_602": "L3T2 SWE333 PC-A",
-            "ab4_604": "L3T2 SWE333 PC-A",
-            "ab4_103": "L3T2 SWE333 PC-A"
-          }
-        ]
-      },
-      {
-        "thursday": [{
-          "ab4_514": "L3T2 SWE333 PC-A",
-          "ab4_204": "L3T2 SWE333 PC-A",
-          "ab4_503": "L3T2 SWE333 PC-A",
-          "ab4_602": "L3T2 SWE333 PC-A",
-          "ab4_604": "L3T2 SWE333 PC-A",
-          "ab4_103": "L3T2 SWE333 PC-A"
-        },
-          {
-            "ab4_514": "L3T2 SWE333 PC-A",
-            "ab4_204": "L3T2 SWE333 PC-A",
-            "ab4_503": "L3T2 SWE333 PC-A",
-            "ab4_602": "L3T2 SWE333 PC-A",
-            "ab4_604": "L3T2 SWE333 PC-A",
-            "ab4_103": "L3T2 SWE333 PC-A"
-          },
-          {
-            "ab4_514": "L3T2 SWE333 PC-A",
-            "ab4_204": "L3T2 SWE333 PC-A",
-            "ab4_503": "L3T2 SWE333 PC-A",
-            "ab4_602": "L3T2 SWE333 PC-A",
-            "ab4_604": "L3T2 SWE333 PC-A",
-            "ab4_103": "L3T2 SWE333 PC-A"
-          },
-          {
-            "ab4_514": "L3T2 SWE333 PC-A",
-            "ab4_204": "L3T2 SWE333 PC-A",
-            "ab4_503": "L3T2 SWE333 PC-A",
-            "ab4_602": "L3T2 SWE333 PC-A",
-            "ab4_604": "L3T2 SWE333 PC-A",
-            "ab4_103": "L3T2 SWE333 PC-A"
-          },
-          {
-            "ab4_514": "L3T2 SWE333 PC-A",
-            "ab4_204": "L3T2 SWE333 PC-A",
-            "ab4_503": "L3T2 SWE333 PC-A",
-            "ab4_602": "L3T2 SWE333 PC-A",
-            "ab4_604": "L3T2 SWE333 PC-A",
-            "ab4_103": "L3T2 SWE333 PC-A"
-          },
-          {
-            "ab4_514": "L3T2 SWE333 PC-A",
-            "ab4_204": "L3T2 SWE333 PC-A",
-            "ab4_503": "L3T2 SWE333 PC-A",
-            "ab4_602": "L3T2 SWE333 PC-A",
-            "ab4_604": "L3T2 SWE333 PC-A",
-            "ab4_103": "L3T2 SWE333 PC-A"
+            "dayId": "fcc0804f-8cee-441c-a68f-89d05344f641",
+            "saturday": [
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-514",
+                "startTime": "08.00",
+                "endTime": "10.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-514",
+                "startTime": "10.00",
+                "endTime": "11.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-514",
+                "startTime": "11.30",
+                "endTime": "01.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-514",
+                "startTime": "01.00",
+                "endTime": "02.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-514",
+                "startTime": "02.30",
+                "endTime": "04.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-514",
+                "startTime": "04.00",
+                "endTime": "05.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-204",
+                "startTime": "08.00",
+                "endTime": "10.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-204",
+                "startTime": "10.00",
+                "endTime": "11.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-204",
+                "startTime": "11.30",
+                "endTime": "01.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-204",
+                "startTime": "01.00",
+                "endTime": "02.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-204",
+                "startTime": "02.30",
+                "endTime": "04.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-204",
+                "startTime": "04.00",
+                "endTime": "05.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-503",
+                "startTime": "08.00",
+                "endTime": "10.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-503",
+                "startTime": "10.00",
+                "endTime": "11.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-503",
+                "startTime": "11.30",
+                "endTime": "01.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-503",
+                "startTime": "01.00",
+                "endTime": "02.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-503",
+                "startTime": "02.30",
+                "endTime": "04.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-503",
+                "startTime": "04.00",
+                "endTime": "05.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-602",
+                "startTime": "08.00",
+                "endTime": "10.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-602",
+                "startTime": "10.00",
+                "endTime": "11.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-602",
+                "startTime": "11.30",
+                "endTime": "01.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-602",
+                "startTime": "01.00",
+                "endTime": "02.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-602",
+                "startTime": "02.30",
+                "endTime": "04.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-602",
+                "startTime": "04.00",
+                "endTime": "05.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-604",
+                "startTime": "08.00",
+                "endTime": "10.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-604",
+                "startTime": "10.00",
+                "endTime": "11.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-604",
+                "startTime": "11.30",
+                "endTime": "01.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-604",
+                "startTime": "01.00",
+                "endTime": "02.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-604",
+                "startTime": "02.30",
+                "endTime": "04.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-604",
+                "startTime": "04.00",
+                "endTime": "05.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB1-103",
+                "startTime": "08.00",
+                "endTime": "10.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB1-103",
+                "startTime": "10.00",
+                "endTime": "11.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB1-103",
+                "startTime": "11.30",
+                "endTime": "01.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB1-103",
+                "startTime": "01.00",
+                "endTime": "02.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB1-103",
+                "startTime": "02.30",
+                "endTime": "04.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB1-103",
+                "startTime": "04.00",
+                "endTime": "05.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-220",
+                "startTime": "08.00",
+                "endTime": "10.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-220",
+                "startTime": "10.00",
+                "endTime": "11.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-220",
+                "startTime": "11.30",
+                "endTime": "01.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-220",
+                "startTime": "01.00",
+                "endTime": "02.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-220",
+                "startTime": "02.30",
+                "endTime": "04.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-220",
+                "startTime": "04.00",
+                "endTime": "05.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              }
+            ],
+            "sunday": [
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-514",
+                "startTime": "08.00",
+                "endTime": "10.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-514",
+                "startTime": "10.00",
+                "endTime": "11.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-514",
+                "startTime": "11.30",
+                "endTime": "01.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-514",
+                "startTime": "01.00",
+                "endTime": "02.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-514",
+                "startTime": "02.30",
+                "endTime": "04.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-514",
+                "startTime": "04.00",
+                "endTime": "05.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-204",
+                "startTime": "08.00",
+                "endTime": "10.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-204",
+                "startTime": "10.00",
+                "endTime": "11.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-204",
+                "startTime": "11.30",
+                "endTime": "01.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-204",
+                "startTime": "01.00",
+                "endTime": "02.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-204",
+                "startTime": "02.30",
+                "endTime": "04.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-204",
+                "startTime": "04.00",
+                "endTime": "05.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-503",
+                "startTime": "08.00",
+                "endTime": "10.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-503",
+                "startTime": "10.00",
+                "endTime": "11.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-503",
+                "startTime": "11.30",
+                "endTime": "01.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-503",
+                "startTime": "01.00",
+                "endTime": "02.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-503",
+                "startTime": "02.30",
+                "endTime": "04.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-503",
+                "startTime": "04.00",
+                "endTime": "05.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-602",
+                "startTime": "08.00",
+                "endTime": "10.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-602",
+                "startTime": "10.00",
+                "endTime": "11.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-602",
+                "startTime": "11.30",
+                "endTime": "01.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-602",
+                "startTime": "01.00",
+                "endTime": "02.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-602",
+                "startTime": "02.30",
+                "endTime": "04.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-602",
+                "startTime": "04.00",
+                "endTime": "05.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-604",
+                "startTime": "08.00",
+                "endTime": "10.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-604",
+                "startTime": "10.00",
+                "endTime": "11.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-604",
+                "startTime": "11.30",
+                "endTime": "01.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-604",
+                "startTime": "01.00",
+                "endTime": "02.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-604",
+                "startTime": "02.30",
+                "endTime": "04.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-604",
+                "startTime": "04.00",
+                "endTime": "05.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB1-103",
+                "startTime": "08.00",
+                "endTime": "10.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB1-103",
+                "startTime": "10.00",
+                "endTime": "11.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB1-103",
+                "startTime": "11.30",
+                "endTime": "01.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB1-103",
+                "startTime": "01.00",
+                "endTime": "02.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB1-103",
+                "startTime": "02.30",
+                "endTime": "04.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB1-103",
+                "startTime": "04.00",
+                "endTime": "05.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-220",
+                "startTime": "08.00",
+                "endTime": "10.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-220",
+                "startTime": "10.00",
+                "endTime": "11.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-220",
+                "startTime": "11.30",
+                "endTime": "01.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-220",
+                "startTime": "01.00",
+                "endTime": "02.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-220",
+                "startTime": "02.30",
+                "endTime": "04.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-220",
+                "startTime": "04.00",
+                "endTime": "05.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              }
+            ],
+            "monday": [
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-514",
+                "startTime": "08.00",
+                "endTime": "10.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-514",
+                "startTime": "10.00",
+                "endTime": "11.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-514",
+                "startTime": "11.30",
+                "endTime": "01.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-514",
+                "startTime": "01.00",
+                "endTime": "02.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-514",
+                "startTime": "02.30",
+                "endTime": "04.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-514",
+                "startTime": "04.00",
+                "endTime": "05.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-204",
+                "startTime": "08.00",
+                "endTime": "10.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-204",
+                "startTime": "10.00",
+                "endTime": "11.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-204",
+                "startTime": "11.30",
+                "endTime": "01.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-204",
+                "startTime": "01.00",
+                "endTime": "02.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-204",
+                "startTime": "02.30",
+                "endTime": "04.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-204",
+                "startTime": "04.00",
+                "endTime": "05.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-503",
+                "startTime": "08.00",
+                "endTime": "10.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-503",
+                "startTime": "10.00",
+                "endTime": "11.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-503",
+                "startTime": "11.30",
+                "endTime": "01.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-503",
+                "startTime": "01.00",
+                "endTime": "02.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-503",
+                "startTime": "02.30",
+                "endTime": "04.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-503",
+                "startTime": "04.00",
+                "endTime": "05.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-602",
+                "startTime": "08.00",
+                "endTime": "10.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-602",
+                "startTime": "10.00",
+                "endTime": "11.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-602",
+                "startTime": "11.30",
+                "endTime": "01.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-602",
+                "startTime": "01.00",
+                "endTime": "02.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-602",
+                "startTime": "02.30",
+                "endTime": "04.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-602",
+                "startTime": "04.00",
+                "endTime": "05.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-604",
+                "startTime": "08.00",
+                "endTime": "10.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-604",
+                "startTime": "10.00",
+                "endTime": "11.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-604",
+                "startTime": "11.30",
+                "endTime": "01.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-604",
+                "startTime": "01.00",
+                "endTime": "02.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-604",
+                "startTime": "02.30",
+                "endTime": "04.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-604",
+                "startTime": "04.00",
+                "endTime": "05.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB1-103",
+                "startTime": "08.00",
+                "endTime": "10.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB1-103",
+                "startTime": "10.00",
+                "endTime": "11.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB1-103",
+                "startTime": "11.30",
+                "endTime": "01.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB1-103",
+                "startTime": "01.00",
+                "endTime": "02.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB1-103",
+                "startTime": "02.30",
+                "endTime": "04.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB1-103",
+                "startTime": "04.00",
+                "endTime": "05.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-220",
+                "startTime": "08.00",
+                "endTime": "10.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-220",
+                "startTime": "10.00",
+                "endTime": "11.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-220",
+                "startTime": "11.30",
+                "endTime": "01.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-220",
+                "startTime": "01.00",
+                "endTime": "02.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-220",
+                "startTime": "02.30",
+                "endTime": "04.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-220",
+                "startTime": "04.00",
+                "endTime": "05.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              }
+            ],
+            "tuesday": [
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-514",
+                "startTime": "08.00",
+                "endTime": "10.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-514",
+                "startTime": "10.00",
+                "endTime": "11.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-514",
+                "startTime": "11.30",
+                "endTime": "01.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-514",
+                "startTime": "01.00",
+                "endTime": "02.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-514",
+                "startTime": "02.30",
+                "endTime": "04.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-514",
+                "startTime": "04.00",
+                "endTime": "05.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-204",
+                "startTime": "08.00",
+                "endTime": "10.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-204",
+                "startTime": "10.00",
+                "endTime": "11.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-204",
+                "startTime": "11.30",
+                "endTime": "01.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-204",
+                "startTime": "01.00",
+                "endTime": "02.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-204",
+                "startTime": "02.30",
+                "endTime": "04.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-204",
+                "startTime": "04.00",
+                "endTime": "05.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-503",
+                "startTime": "08.00",
+                "endTime": "10.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-503",
+                "startTime": "10.00",
+                "endTime": "11.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-503",
+                "startTime": "11.30",
+                "endTime": "01.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-503",
+                "startTime": "01.00",
+                "endTime": "02.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-503",
+                "startTime": "02.30",
+                "endTime": "04.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-503",
+                "startTime": "04.00",
+                "endTime": "05.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-602",
+                "startTime": "08.00",
+                "endTime": "10.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-602",
+                "startTime": "10.00",
+                "endTime": "11.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-602",
+                "startTime": "11.30",
+                "endTime": "01.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-602",
+                "startTime": "01.00",
+                "endTime": "02.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-602",
+                "startTime": "02.30",
+                "endTime": "04.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-602",
+                "startTime": "04.00",
+                "endTime": "05.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-604",
+                "startTime": "08.00",
+                "endTime": "10.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-604",
+                "startTime": "10.00",
+                "endTime": "11.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-604",
+                "startTime": "11.30",
+                "endTime": "01.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-604",
+                "startTime": "01.00",
+                "endTime": "02.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-604",
+                "startTime": "02.30",
+                "endTime": "04.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-604",
+                "startTime": "04.00",
+                "endTime": "05.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB1-103",
+                "startTime": "08.00",
+                "endTime": "10.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB1-103",
+                "startTime": "10.00",
+                "endTime": "11.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB1-103",
+                "startTime": "11.30",
+                "endTime": "01.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB1-103",
+                "startTime": "01.00",
+                "endTime": "02.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB1-103",
+                "startTime": "02.30",
+                "endTime": "04.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB1-103",
+                "startTime": "04.00",
+                "endTime": "05.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-220",
+                "startTime": "08.00",
+                "endTime": "10.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-220",
+                "startTime": "10.00",
+                "endTime": "11.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-220",
+                "startTime": "11.30",
+                "endTime": "01.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-220",
+                "startTime": "01.00",
+                "endTime": "02.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-220",
+                "startTime": "02.30",
+                "endTime": "04.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-220",
+                "startTime": "04.00",
+                "endTime": "05.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              }
+            ],
+            "wednesday": [
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-514",
+                "startTime": "08.00",
+                "endTime": "10.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-514",
+                "startTime": "10.00",
+                "endTime": "11.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-514",
+                "startTime": "11.30",
+                "endTime": "01.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-514",
+                "startTime": "01.00",
+                "endTime": "02.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-514",
+                "startTime": "02.30",
+                "endTime": "04.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-514",
+                "startTime": "04.00",
+                "endTime": "05.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-204",
+                "startTime": "08.00",
+                "endTime": "10.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-204",
+                "startTime": "10.00",
+                "endTime": "11.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-204",
+                "startTime": "11.30",
+                "endTime": "01.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-204",
+                "startTime": "01.00",
+                "endTime": "02.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-204",
+                "startTime": "02.30",
+                "endTime": "04.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-204",
+                "startTime": "04.00",
+                "endTime": "05.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-503",
+                "startTime": "08.00",
+                "endTime": "10.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-503",
+                "startTime": "10.00",
+                "endTime": "11.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-503",
+                "startTime": "11.30",
+                "endTime": "01.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-503",
+                "startTime": "01.00",
+                "endTime": "02.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-503",
+                "startTime": "02.30",
+                "endTime": "04.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-503",
+                "startTime": "04.00",
+                "endTime": "05.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-602",
+                "startTime": "08.00",
+                "endTime": "10.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-602",
+                "startTime": "10.00",
+                "endTime": "11.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-602",
+                "startTime": "11.30",
+                "endTime": "01.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-602",
+                "startTime": "01.00",
+                "endTime": "02.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-602",
+                "startTime": "02.30",
+                "endTime": "04.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-602",
+                "startTime": "04.00",
+                "endTime": "05.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-604",
+                "startTime": "08.00",
+                "endTime": "10.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-604",
+                "startTime": "10.00",
+                "endTime": "11.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-604",
+                "startTime": "11.30",
+                "endTime": "01.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-604",
+                "startTime": "01.00",
+                "endTime": "02.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-604",
+                "startTime": "02.30",
+                "endTime": "04.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-604",
+                "startTime": "04.00",
+                "endTime": "05.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB1-103",
+                "startTime": "08.00",
+                "endTime": "10.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB1-103",
+                "startTime": "10.00",
+                "endTime": "11.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB1-103",
+                "startTime": "11.30",
+                "endTime": "01.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB1-103",
+                "startTime": "01.00",
+                "endTime": "02.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB1-103",
+                "startTime": "02.30",
+                "endTime": "04.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB1-103",
+                "startTime": "04.00",
+                "endTime": "05.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-220",
+                "startTime": "08.00",
+                "endTime": "10.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-220",
+                "startTime": "10.00",
+                "endTime": "11.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-220",
+                "startTime": "11.30",
+                "endTime": "01.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-220",
+                "startTime": "01.00",
+                "endTime": "02.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-220",
+                "startTime": "02.30",
+                "endTime": "04.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-220",
+                "startTime": "04.00",
+                "endTime": "05.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              }
+            ],
+            "thursday": [
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-514",
+                "startTime": "08.00",
+                "endTime": "10.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-514",
+                "startTime": "10.00",
+                "endTime": "11.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-514",
+                "startTime": "11.30",
+                "endTime": "01.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-514",
+                "startTime": "01.00",
+                "endTime": "02.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-514",
+                "startTime": "02.30",
+                "endTime": "04.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-514",
+                "startTime": "04.00",
+                "endTime": "05.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-204",
+                "startTime": "08.00",
+                "endTime": "10.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-204",
+                "startTime": "10.00",
+                "endTime": "11.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-204",
+                "startTime": "11.30",
+                "endTime": "01.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-204",
+                "startTime": "01.00",
+                "endTime": "02.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-204",
+                "startTime": "02.30",
+                "endTime": "04.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-204",
+                "startTime": "04.00",
+                "endTime": "05.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-503",
+                "startTime": "08.00",
+                "endTime": "10.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-503",
+                "startTime": "10.00",
+                "endTime": "11.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-503",
+                "startTime": "11.30",
+                "endTime": "01.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-503",
+                "startTime": "01.00",
+                "endTime": "02.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-503",
+                "startTime": "02.30",
+                "endTime": "04.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-503",
+                "startTime": "04.00",
+                "endTime": "05.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-602",
+                "startTime": "08.00",
+                "endTime": "10.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-602",
+                "startTime": "10.00",
+                "endTime": "11.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-602",
+                "startTime": "11.30",
+                "endTime": "01.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-602",
+                "startTime": "01.00",
+                "endTime": "02.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-602",
+                "startTime": "02.30",
+                "endTime": "04.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-602",
+                "startTime": "04.00",
+                "endTime": "05.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-604",
+                "startTime": "08.00",
+                "endTime": "10.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-604",
+                "startTime": "10.00",
+                "endTime": "11.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-604",
+                "startTime": "11.30",
+                "endTime": "01.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-604",
+                "startTime": "01.00",
+                "endTime": "02.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-604",
+                "startTime": "02.30",
+                "endTime": "04.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-604",
+                "startTime": "04.00",
+                "endTime": "05.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB1-103",
+                "startTime": "08.00",
+                "endTime": "10.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB1-103",
+                "startTime": "10.00",
+                "endTime": "11.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB1-103",
+                "startTime": "11.30",
+                "endTime": "01.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB1-103",
+                "startTime": "01.00",
+                "endTime": "02.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB1-103",
+                "startTime": "02.30",
+                "endTime": "04.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB1-103",
+                "startTime": "04.00",
+                "endTime": "05.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-220",
+                "startTime": "08.00",
+                "endTime": "10.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-220",
+                "startTime": "10.00",
+                "endTime": "11.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-220",
+                "startTime": "11.30",
+                "endTime": "01.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-220",
+                "startTime": "01.00",
+                "endTime": "02.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-220",
+                "startTime": "02.30",
+                "endTime": "04.00",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              },
+              {
+                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+                "roomNo": "AB4-220",
+                "startTime": "04.00",
+                "endTime": "05.30",
+                "label": "Not Occupied",
+                "courseCode": "Not Occupied",
+                "section": "Not Occupied",
+                "facultyMember": "Not Occupied",
+                "facultyMemberEmployeeId": "Not Occupied"
+              }
+            ]
           }
         ]
       }
-    ];
+    ;
 
     return of(json);
   }

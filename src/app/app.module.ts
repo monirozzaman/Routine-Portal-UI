@@ -12,6 +12,7 @@ import {ProfileComponent} from './profile/profile.component';
 import {DashboardAdminComponent} from './admin/dashboard-admin/dashboard-admin.component';
 import {DashboardAdminService} from "./services/dashboard.admin.service";
 import {AccessControlComponent} from './admin/access-control/access-control.component';
+import {ModalModule} from "angular-custom-modal";
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import {AccessControlComponent} from './admin/access-control/access-control.comp
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ModalModule
   ],
   providers: [DashboardAdminService],
   bootstrap: [AppComponent]

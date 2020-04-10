@@ -5,11 +5,29 @@
   margin-top: 100px;
 }
 
+td:hover {
+  font-family: 'Oswald', sans-serif;
+  font-family: 'Noto Serif', serif;
+  background-color: rgba(255, 135, 114, 0.65);
+  color: #FFFFFF;
+}
+
 th {
   font-family: 'Oswald', sans-serif;
   font-family: 'Noto Serif', serif;
-  background-color: #36b66f;
+  background-color: #0fb62d;
   color: #FFFFFF;
+}
+
+.th {
+  font-family: 'Oswald', sans-serif;
+  font-family: 'Noto Serif', serif;
+  background-color: #0fb62d;
+  color: #FFFFFF;
+}
+
+.colors {
+  background-color: rgba(54, 182, 111, 0.66);
 }
 
 .plusIcon {

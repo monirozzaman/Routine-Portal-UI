@@ -1,138 +1,809 @@
 <div class="bs-example">
+  <div class="mb-3 text-right">
+    <div class="btn-group">
+      <button (click)="htmlInsideModal.open()" class="btn btn-success" type="button">Add New Routine</button>
+      <button class="btn btn-warning" type="button">Update</button>
+      <button class="btn btn-danger" type="button">Delete</button>
+    </div>
+  </div>
+  <modal #htmlInsideModal>
+    fhgfhgfhg
+  </modal>
+
+
   <table class="table table-bordered">
-    <thead>
+
     <tr>
       <th class="text-center" colspan="13">Saturday</th>
     </tr>
-    </thead>
-    <tbody>
+    <!--------------------------------------------------------------AB4 -514----------------------------------->
+    <tr>
+      <td class="text-center">
+        <div>
 
-    <tr>
-      <th>Time Slot /Room No</th>
-      <th>8:30 - 10:00</th>
-      <th>FM</th>
-      <th>10:00 - 11:30</th>
-      <th>FM</th>
-      <th>11:30 - 01:00</th>
-      <th>FM</th>
-      <th>01:00 - 2:30</th>
-      <th>FM</th>
-      <th>2:30 - 4:00</th>
-      <th>FM</th>
-      <th>4:00 - 5:30</th>
-      <th>FM</th>
+          AB4-514<br>(SWE-Lab)
+        </div>
+      </td>
+      <td *ngFor="let a of saturdayClassRoomDetails4514">
+        <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
+        <b>Course code:</b> {{a.courseCode }}<br>
+        <b>Label :</b> {{ a.label }}<br>
+        <b>Section:</b> {{ a.section }}<br>
+        <b>FM:</b> {{a.facultyMember }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.roomNo"><i class="fas fa-plus-circle plusIcon"></i></a>
+      </td>
     </tr>
-    <tr>
-      <td>AB4-514<br>(SWE-Lab)</td>
 
-      <td *ngFor="let a of saturdayClassRoomDetails">
-        {{ a.ab4_514 }}
-        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.ab4_514"><i class="fas fa-plus-circle plusIcon"></i></a>
-      </td>
-    </tr>
+    <!--------------------------------------------------------------AB4 -204----------------------------------->
     <tr>
-      <td>AB4-204</td>
-      <td *ngFor="let a of saturdayClassRoomDetails">
-        {{ a.ab4_204 }}
-        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.ab4_204"><i class="fas fa-plus-circle plusIcon"></i></a>
+      <td class="text-center">
+        <div>
+          AB4-204
+        </div>
       </td>
-    </tr>
-    <tr>
-      <td>AB4-503</td>
-      <td *ngFor="let a of saturdayClassRoomDetails">
-        {{ a.ab4_503 }}
-        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.ab4_503"><i class="fas fa-plus-circle plusIcon"></i></a>
-      </td>
-    </tr>
-    <tr>
-      <td>AB4-602</td>
-      <td *ngFor="let a of saturdayClassRoomDetails">
-        {{ a.ab4_602 }}
-        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.ab4_602"><i class="fas fa-plus-circle plusIcon"></i></a>
-      </td>
-    </tr>
-    <tr>
-      <td>AB4-604</td>
-      <td *ngFor="let a of saturdayClassRoomDetails">
-        {{ a.ab4_604 }}
-        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.ab4_604"><i class="fas fa-plus-circle plusIcon"></i></a>
-      </td>
-    </tr>
-    <tr>
-      <td>AB1-103</td>
-      <td *ngFor="let a of saturdayClassRoomDetails">
-        {{ a.ab4_103 }}
-        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.ab4_103"><i class="fas fa-plus-circle plusIcon"></i></a>
-      </td>
-    </tr>
-    </tbody>
 
+      <td *ngFor="let a of saturdayClassRoomDetails4204">
+        <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
+        <b>Course code:</b> {{a.courseCode }}<br>
+        <b>Lavel :</b> {{ a.label }}<br>
+        <b>Section:</b> {{ a.section }}<br>
+        <b>FM:</b> {{a.facultyMember }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.roomNo"><i class="fas fa-plus-circle plusIcon"></i></a>
+      </td>
+    </tr>
 
-    <thead>
+    <!--------------------------------------------------------------AB4 -503----------------------------------->
+    <tr>
+      <td class="text-center">
+        <div>
+          AB4-503
+        </div>
+      </td>
+
+      <td *ngFor="let a of saturdayClassRoomDetails4503">
+        <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
+        <b>Course code:</b> {{a.courseCode }}<br>
+        <b>Lavel :</b> {{ a.label }}<br>
+        <b>Section:</b> {{ a.section }}<br>
+        <b>FM:</b> {{a.facultyMember }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.roomNo"><i class="fas fa-plus-circle plusIcon"></i></a>
+      </td>
+    </tr>
+    <!--------------------------------------------------------------AB4 -602----------------------------------->
+    <tr>
+      <td class="text-center">
+        <div>
+          AB4-602
+        </div>
+      </td>
+
+      <td *ngFor="let a of saturdayClassRoomDetails4602">
+        <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
+        <b>Course code:</b> {{a.courseCode }}<br>
+        <b>Lavel :</b> {{ a.label }}<br>
+        <b>Section:</b> {{ a.section }}<br>
+        <b>FM:</b> {{a.facultyMember }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.roomNo"><i class="fas fa-plus-circle plusIcon"></i></a>
+      </td>
+    </tr>
+    <!--------------------------------------------------------------AB4 -604----------------------------------->
+    <tr>
+      <td class="text-center">
+        <div>
+          AB4-604
+        </div>
+      </td>
+
+      <td *ngFor="let a of saturdayClassRoomDetails4604">
+        <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
+        <b>Course code:</b> {{a.courseCode }}<br>
+        <b>Lavel :</b> {{ a.label }}<br>
+        <b>Section:</b> {{ a.section }}<br>
+        <b>FM:</b> {{a.facultyMember }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.roomNo"><i class="fas fa-plus-circle plusIcon"></i></a>
+      </td>
+    </tr>
+    <!--------------------------------------------------------------AB1 -103----------------------------------->
+    <tr>
+      <td class="text-center">
+        <div>
+          AB1-103
+        </div>
+      </td>
+
+      <td *ngFor="let a of saturdayClassRoomDetails1103">
+        <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
+        <b>Course code:</b> {{a.courseCode }}<br>
+        <b>Lavel :</b> {{ a.label }}<br>
+        <b>Section:</b> {{ a.section }}<br>
+        <b>FM:</b> {{a.facultyMember }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.roomNo"><i class="fas fa-plus-circle plusIcon"></i></a>
+      </td>
+    </tr>
+    <!--------------------------------------------------------------AB4 -220----------------------------------->
+    <tr>
+      <td class="text-center">
+        <div>
+          AB4-220
+        </div>
+      </td>
+
+      <td *ngFor="let a of saturdayClassRoomDetails4220">
+        <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
+        <b>Course code:</b> {{a.courseCode }}<br>
+        <b>Lavel :</b> {{ a.label }}<br>
+        <b>Section:</b> {{ a.section }}<br>
+        <b>FM:</b> {{a.facultyMember }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.roomNo"><i class="fas fa-plus-circle plusIcon"></i></a>
+      </td>
+    </tr>
+
+  </table>
+
+  <!--
+ *
+ **Sunday Table
+ **
+  -->
+  <table class="table table-bordered">
+
     <tr>
       <th class="text-center" colspan="13">Sunday</th>
     </tr>
-    </thead>
-    <tbody>
+    <!--------------------------------------------------------------AB4 -514----------------------------------->
+    <tr>
+      <td class="text-center">
+        <div>
+          AB4-514<br>(SWE-Lab)
+        </div>
+      </td>
+      <td *ngFor="let a of sundayClassRoomDetails4514">
+        <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
+        <b>Course code:</b> {{a.courseCode }}<br>
+        <b>Label :</b> {{ a.label }}<br>
+        <b>Section:</b> {{ a.section }}<br>
+        <b>FM:</b> {{a.facultyMember }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.roomNo"><i class="fas fa-plus-circle plusIcon"></i></a>
+      </td>
+    </tr>
 
+    <!--------------------------------------------------------------AB4 -204----------------------------------->
     <tr>
-      <th>Time Slot /Room No</th>
-      <th>8:30 - 10:00</th>
-      <th>FM</th>
-      <th>10:00 - 11:30</th>
-      <th>FM</th>
-      <th>11:30 - 01:00</th>
-      <th>FM</th>
-      <th>01:00 - 2:30</th>
-      <th>FM</th>
-      <th>2:30 - 4:00</th>
-      <th>FM</th>
-      <th>4:00 - 5:30</th>
-      <th>FM</th>
-    </tr>
-    <tr>
-      <td>AB4-514<br>(SWE-Lab)</td>
+      <td class="text-center">
+        <div>
+          AB4-204
+        </div>
+      </td>
 
-      <td *ngFor="let a of sundayClassRoomDetails">
-        {{ a.ab4_514 }}
-        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.ab4_514"><i class="fas fa-plus-circle plusIcon"></i></a>
+      <td *ngFor="let a of sundayClassRoomDetails4204">
+        <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
+        <b>Course code:</b> {{a.courseCode }}<br>
+        <b>Lavel :</b> {{ a.label }}<br>
+        <b>Section:</b> {{ a.section }}<br>
+        <b>FM:</b> {{a.facultyMember }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.roomNo"><i class="fas fa-plus-circle plusIcon"></i></a>
       </td>
     </tr>
+
+    <!--------------------------------------------------------------AB4 -503----------------------------------->
     <tr>
-      <td>AB4-204</td>
-      <td *ngFor="let a of saturdayClassRoomDetails">
-        {{ a.ab4_204 }}
-        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.ab4_204"><i class="fas fa-plus-circle plusIcon"></i></a>
+      <td class="text-center">
+        <div>
+          AB4-503
+        </div>
+      </td>
+
+      <td *ngFor="let a of sundayClassRoomDetails4503">
+        <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
+        <b>Course code:</b> {{a.courseCode }}<br>
+        <b>Lavel :</b> {{ a.label }}<br>
+        <b>Section:</b> {{ a.section }}<br>
+        <b>FM:</b> {{a.facultyMember }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.roomNo"><i class="fas fa-plus-circle plusIcon"></i></a>
       </td>
     </tr>
+    <!--------------------------------------------------------------AB4 -602----------------------------------->
     <tr>
-      <td>AB4-503</td>
-      <td *ngFor="let a of saturdayClassRoomDetails">
-        {{ a.ab4_503 }}
-        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.ab4_503"><i class="fas fa-plus-circle plusIcon"></i></a>
+      <td class="text-center">
+        <div>
+          AB4-602
+        </div>
+      </td>
+
+      <td *ngFor="let a of sundayClassRoomDetails4602">
+        <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
+        <b>Course code:</b> {{a.courseCode }}<br>
+        <b>Lavel :</b> {{ a.label }}<br>
+        <b>Section:</b> {{ a.section }}<br>
+        <b>FM:</b> {{a.facultyMember }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.roomNo"><i class="fas fa-plus-circle plusIcon"></i></a>
       </td>
     </tr>
+    <!--------------------------------------------------------------AB4 -604----------------------------------->
     <tr>
-      <td>AB4-602</td>
-      <td *ngFor="let a of saturdayClassRoomDetails">
-        {{ a.ab4_602 }}
-        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.ab4_602"><i class="fas fa-plus-circle plusIcon"></i></a>
+      <td class="text-center">
+        <div>
+          AB4-604
+        </div>
+      </td>
+
+      <td *ngFor="let a of sundayClassRoomDetails4604">
+        <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
+        <b>Course code:</b> {{a.courseCode }}<br>
+        <b>Lavel :</b> {{ a.label }}<br>
+        <b>Section:</b> {{ a.section }}<br>
+        <b>FM:</b> {{a.facultyMember }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.roomNo"><i class="fas fa-plus-circle plusIcon"></i></a>
       </td>
     </tr>
+    <!--------------------------------------------------------------AB1 -103----------------------------------->
     <tr>
-      <td>AB4-604</td>
-      <td *ngFor="let a of saturdayClassRoomDetails">
-        {{ a.ab4_604 }}
-        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.ab4_604"><i class="fas fa-plus-circle plusIcon"></i></a>
+      <td class="text-center">
+        <div>
+          AB1-103
+        </div>
+      </td>
+
+      <td *ngFor="let a of sundayClassRoomDetails1103">
+        <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
+        <b>Course code:</b> {{a.courseCode }}<br>
+        <b>Lavel :</b> {{ a.label }}<br>
+        <b>Section:</b> {{ a.section }}<br>
+        <b>FM:</b> {{a.facultyMember }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.roomNo"><i class="fas fa-plus-circle plusIcon"></i></a>
       </td>
     </tr>
+    <!--------------------------------------------------------------AB4 -220----------------------------------->
     <tr>
-      <td>AB1-103</td>
-      <td *ngFor="let a of saturdayClassRoomDetails">
-        {{ a.ab4_103 }}
-        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.ab4_103"><i class="fas fa-plus-circle plusIcon"></i></a>
+      <td class="text-center">
+        <div>
+          AB4-220
+        </div>
+      </td>
+
+      <td *ngFor="let a of sundayClassRoomDetails4220">
+        <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
+        <b>Course code:</b> {{a.courseCode }}<br>
+        <b>Lavel :</b> {{ a.label }}<br>
+        <b>Section:</b> {{ a.section }}<br>
+        <b>FM:</b> {{a.facultyMember }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.roomNo"><i class="fas fa-plus-circle plusIcon"></i></a>
       </td>
     </tr>
-    </tbody>
+
   </table>
+
+  <!--
+ *
+ **Monday Table
+ **
+  -->
+  <table class="table table-bordered">
+
+    <tr>
+      <th class="text-center" colspan="13">Monday</th>
+    </tr>
+    <!--------------------------------------------------------------AB4 -514----------------------------------->
+    <tr>
+      <td class="text-center">
+        <div>
+          AB4-514<br>(SWE-Lab)
+        </div>
+      </td>
+      <td *ngFor="let a of mondayClassRoomDetails4514">
+        <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
+        <b>Course code:</b> {{a.courseCode }}<br>
+        <b>Label :</b> {{ a.label }}<br>
+        <b>Section:</b> {{ a.section }}<br>
+        <b>FM:</b> {{a.facultyMember }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.roomNo"><i class="fas fa-plus-circle plusIcon"></i></a>
+      </td>
+    </tr>
+
+    <!--------------------------------------------------------------AB4 -204----------------------------------->
+    <tr>
+      <td class="text-center">
+        <div>
+          AB4-204
+        </div>
+      </td>
+
+      <td *ngFor="let a of mondayClassRoomDetails4204">
+        <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
+        <b>Course code:</b> {{a.courseCode }}<br>
+        <b>Lavel :</b> {{ a.label }}<br>
+        <b>Section:</b> {{ a.section }}<br>
+        <b>FM:</b> {{a.facultyMember }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.roomNo"><i class="fas fa-plus-circle plusIcon"></i></a>
+      </td>
+    </tr>
+
+    <!--------------------------------------------------------------AB4 -503----------------------------------->
+    <tr>
+      <td class="text-center">
+        <div>
+          AB4-503
+        </div>
+      </td>
+
+      <td *ngFor="let a of mondayClassRoomDetails4503">
+        <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
+        <b>Course code:</b> {{a.courseCode }}<br>
+        <b>Lavel :</b> {{ a.label }}<br>
+        <b>Section:</b> {{ a.section }}<br>
+        <b>FM:</b> {{a.facultyMember }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.roomNo"><i class="fas fa-plus-circle plusIcon"></i></a>
+      </td>
+    </tr>
+    <!--------------------------------------------------------------AB4 -602----------------------------------->
+    <tr>
+      <td class="text-center">
+        <div>
+          AB4-602
+        </div>
+      </td>
+
+      <td *ngFor="let a of mondayClassRoomDetails4602">
+        <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
+        <b>Course code:</b> {{a.courseCode }}<br>
+        <b>Lavel :</b> {{ a.label }}<br>
+        <b>Section:</b> {{ a.section }}<br>
+        <b>FM:</b> {{a.facultyMember }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.roomNo"><i class="fas fa-plus-circle plusIcon"></i></a>
+      </td>
+    </tr>
+    <!--------------------------------------------------------------AB4 -604----------------------------------->
+    <tr>
+      <td class="text-center">
+        <div>
+          AB4-604
+        </div>
+      </td>
+
+      <td *ngFor="let a of mondayClassRoomDetails4604">
+        <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
+        <b>Course code:</b> {{a.courseCode }}<br>
+        <b>Lavel :</b> {{ a.label }}<br>
+        <b>Section:</b> {{ a.section }}<br>
+        <b>FM:</b> {{a.facultyMember }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.roomNo"><i class="fas fa-plus-circle plusIcon"></i></a>
+      </td>
+    </tr>
+    <!--------------------------------------------------------------AB1 -103----------------------------------->
+    <tr>
+      <td class="text-center">
+        <div>
+          AB1-103
+        </div>
+      </td>
+
+      <td *ngFor="let a of mondayClassRoomDetails1103">
+        <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
+        <b>Course code:</b> {{a.courseCode }}<br>
+        <b>Lavel :</b> {{ a.label }}<br>
+        <b>Section:</b> {{ a.section }}<br>
+        <b>FM:</b> {{a.facultyMember }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.roomNo"><i class="fas fa-plus-circle plusIcon"></i></a>
+      </td>
+    </tr>
+    <!--------------------------------------------------------------AB4 -220----------------------------------->
+    <tr>
+      <td class="text-center">
+        <div>
+          AB4-220
+        </div>
+      </td>
+
+      <td *ngFor="let a of mondayClassRoomDetails4220">
+        <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
+        <b>Course code:</b> {{a.courseCode }}<br>
+        <b>Lavel :</b> {{ a.label }}<br>
+        <b>Section:</b> {{ a.section }}<br>
+        <b>FM:</b> {{a.facultyMember }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.roomNo"><i class="fas fa-plus-circle plusIcon"></i></a>
+      </td>
+    </tr>
+
+  </table>
+
+  <!--
+ *
+ **Tuesday Table
+ **
+  -->
+  <table class="table table-bordered">
+
+    <tr>
+      <th class="text-center" colspan="13">Tuesday</th>
+    </tr>
+    <!--------------------------------------------------------------AB4 -514----------------------------------->
+    <tr>
+      <td class="text-center">
+        <div>
+          AB4-514<br>(SWE-Lab)
+        </div>
+      </td>
+      <td *ngFor="let a of tuesdayClassRoomDetails4514">
+        <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
+        <b>Course code:</b> {{a.courseCode }}<br>
+        <b>Label :</b> {{ a.label }}<br>
+        <b>Section:</b> {{ a.section }}<br>
+        <b>FM:</b> {{a.facultyMember }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.roomNo"><i class="fas fa-plus-circle plusIcon"></i></a>
+      </td>
+    </tr>
+
+    <!--------------------------------------------------------------AB4 -204----------------------------------->
+    <tr>
+      <td class="text-center">
+        <div>
+          AB4-204
+        </div>
+      </td>
+
+      <td *ngFor="let a of tuesdayClassRoomDetails4204">
+        <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
+        <b>Course code:</b> {{a.courseCode }}<br>
+        <b>Lavel :</b> {{ a.label }}<br>
+        <b>Section:</b> {{ a.section }}<br>
+        <b>FM:</b> {{a.facultyMember }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.roomNo"><i class="fas fa-plus-circle plusIcon"></i></a>
+      </td>
+    </tr>
+
+    <!--------------------------------------------------------------AB4 -503----------------------------------->
+    <tr>
+      <td class="text-center">
+        <div>
+          AB4-503
+        </div>
+      </td>
+
+      <td *ngFor="let a of tuesdayClassRoomDetails4503">
+        <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
+        <b>Course code:</b> {{a.courseCode }}<br>
+        <b>Lavel :</b> {{ a.label }}<br>
+        <b>Section:</b> {{ a.section }}<br>
+        <b>FM:</b> {{a.facultyMember }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.roomNo"><i class="fas fa-plus-circle plusIcon"></i></a>
+      </td>
+    </tr>
+    <!--------------------------------------------------------------AB4 -602----------------------------------->
+    <tr>
+      <td class="text-center">
+        <div>
+          AB4-602
+        </div>
+      </td>
+
+      <td *ngFor="let a of tuesdayClassRoomDetails4602">
+        <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
+        <b>Course code:</b> {{a.courseCode }}<br>
+        <b>Lavel :</b> {{ a.label }}<br>
+        <b>Section:</b> {{ a.section }}<br>
+        <b>FM:</b> {{a.facultyMember }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.roomNo"><i class="fas fa-plus-circle plusIcon"></i></a>
+      </td>
+    </tr>
+    <!--------------------------------------------------------------AB4 -604----------------------------------->
+    <tr>
+      <td class="text-center">
+        <div>
+          AB4-604
+        </div>
+      </td>
+
+      <td *ngFor="let a of tuesdayClassRoomDetails4604">
+        <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
+        <b>Course code:</b> {{a.courseCode }}<br>
+        <b>Lavel :</b> {{ a.label }}<br>
+        <b>Section:</b> {{ a.section }}<br>
+        <b>FM:</b> {{a.facultyMember }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.roomNo"><i class="fas fa-plus-circle plusIcon"></i></a>
+      </td>
+    </tr>
+    <!--------------------------------------------------------------AB1 -103----------------------------------->
+    <tr>
+      <td class="text-center">
+        <div>
+          AB1-103
+        </div>
+      </td>
+
+      <td *ngFor="let a of tuesdayClassRoomDetails1103">
+        <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
+        <b>Course code:</b> {{a.courseCode }}<br>
+        <b>Lavel :</b> {{ a.label }}<br>
+        <b>Section:</b> {{ a.section }}<br>
+        <b>FM:</b> {{a.facultyMember }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.roomNo"><i class="fas fa-plus-circle plusIcon"></i></a>
+      </td>
+    </tr>
+    <!--------------------------------------------------------------AB4 -220----------------------------------->
+    <tr>
+      <td class="text-center">
+        <div>
+          AB4-220
+        </div>
+      </td>
+
+      <td *ngFor="let a of tuesdayClassRoomDetails4220">
+        <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
+        <b>Course code:</b> {{a.courseCode }}<br>
+        <b>Lavel :</b> {{ a.label }}<br>
+        <b>Section:</b> {{ a.section }}<br>
+        <b>FM:</b> {{a.facultyMember }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.roomNo"><i class="fas fa-plus-circle plusIcon"></i></a>
+      </td>
+    </tr>
+
+  </table>
+
+  <!--
+*
+**Wednesday Table
+**
+-->
+  <table class="table table-bordered">
+
+    <tr>
+      <th class="text-center" colspan="13">Wednesday</th>
+    </tr>
+    <!--------------------------------------------------------------AB4 -514----------------------------------->
+    <tr>
+      <td class="text-center">
+        <div>
+          AB4-514<br>(SWE-Lab)
+        </div>
+      </td>
+      <td *ngFor="let a of wednesdayClassRoomDetails4514">
+        <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
+        <b>Course code:</b> {{a.courseCode }}<br>
+        <b>Label :</b> {{ a.label }}<br>
+        <b>Section:</b> {{ a.section }}<br>
+        <b>FM:</b> {{a.facultyMember }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.roomNo"><i class="fas fa-plus-circle plusIcon"></i></a>
+      </td>
+    </tr>
+
+    <!--------------------------------------------------------------AB4 -204----------------------------------->
+    <tr>
+      <td class="text-center">
+        <div>
+          AB4-204
+        </div>
+      </td>
+
+      <td *ngFor="let a of wednesdayClassRoomDetails4204">
+        <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
+        <b>Course code:</b> {{a.courseCode }}<br>
+        <b>Lavel :</b> {{ a.label }}<br>
+        <b>Section:</b> {{ a.section }}<br>
+        <b>FM:</b> {{a.facultyMember }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.roomNo"><i class="fas fa-plus-circle plusIcon"></i></a>
+      </td>
+    </tr>
+
+    <!--------------------------------------------------------------AB4 -503----------------------------------->
+    <tr>
+      <td class="text-center">
+        <div>
+          AB4-503
+        </div>
+      </td>
+
+      <td *ngFor="let a of wednesdayClassRoomDetails4503">
+        <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
+        <b>Course code:</b> {{a.courseCode }}<br>
+        <b>Lavel :</b> {{ a.label }}<br>
+        <b>Section:</b> {{ a.section }}<br>
+        <b>FM:</b> {{a.facultyMember }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.roomNo"><i class="fas fa-plus-circle plusIcon"></i></a>
+      </td>
+    </tr>
+    <!--------------------------------------------------------------AB4 -602----------------------------------->
+    <tr>
+      <td class="text-center">
+        <div>
+          AB4-602
+        </div>
+      </td>
+
+      <td *ngFor="let a of wednesdayClassRoomDetails4602">
+        <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
+        <b>Course code:</b> {{a.courseCode }}<br>
+        <b>Lavel :</b> {{ a.label }}<br>
+        <b>Section:</b> {{ a.section }}<br>
+        <b>FM:</b> {{a.facultyMember }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.roomNo"><i class="fas fa-plus-circle plusIcon"></i></a>
+      </td>
+    </tr>
+    <!--------------------------------------------------------------AB4 -604----------------------------------->
+    <tr>
+      <td class="text-center">
+        <div>
+          AB4-604
+        </div>
+      </td>
+
+      <td *ngFor="let a of wednesdayClassRoomDetails4604">
+        <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
+        <b>Course code:</b> {{a.courseCode }}<br>
+        <b>Lavel :</b> {{ a.label }}<br>
+        <b>Section:</b> {{ a.section }}<br>
+        <b>FM:</b> {{a.facultyMember }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.roomNo"><i class="fas fa-plus-circle plusIcon"></i></a>
+      </td>
+    </tr>
+    <!--------------------------------------------------------------AB1 -103----------------------------------->
+    <tr>
+      <td class="text-center">
+        <div>
+          AB1-103
+        </div>
+      </td>
+
+      <td *ngFor="let a of wednesdayClassRoomDetails1103">
+        <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
+        <b>Course code:</b> {{a.courseCode }}<br>
+        <b>Lavel :</b> {{ a.label }}<br>
+        <b>Section:</b> {{ a.section }}<br>
+        <b>FM:</b> {{a.facultyMember }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.roomNo"><i class="fas fa-plus-circle plusIcon"></i></a>
+      </td>
+    </tr>
+    <!--------------------------------------------------------------AB4 -220----------------------------------->
+    <tr>
+      <td class="text-center">
+        <div>
+          AB4-220
+        </div>
+      </td>
+
+      <td *ngFor="let a of wednesdayClassRoomDetails4220">
+        <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
+        <b>Course code:</b> {{a.courseCode }}<br>
+        <b>Lavel :</b> {{ a.label }}<br>
+        <b>Section:</b> {{ a.section }}<br>
+        <b>FM:</b> {{a.facultyMember }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.roomNo"><i class="fas fa-plus-circle plusIcon"></i></a>
+      </td>
+    </tr>
+
+  </table>
+
+  <!--
+*
+**Thursday Table
+**
+-->
+  <table class="table table-bordered">
+
+    <tr>
+      <th class="text-center" colspan="13">Thursday</th>
+    </tr>
+    <!--------------------------------------------------------------AB4 -514----------------------------------->
+    <tr>
+      <td class="text-center">
+        <div>
+          AB4-514<br>(SWE-Lab)
+        </div>
+      </td>
+      <td *ngFor="let a of thursdayClassRoomDetails4514">
+        <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
+        <b>Course code:</b> {{a.courseCode }}<br>
+        <b>Label :</b> {{ a.label }}<br>
+        <b>Section:</b> {{ a.section }}<br>
+        <b>FM:</b> {{a.facultyMember }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.roomNo"><i class="fas fa-plus-circle plusIcon"></i></a>
+      </td>
+    </tr>
+
+    <!--------------------------------------------------------------AB4 -204----------------------------------->
+    <tr>
+      <td class="text-center">
+        <div>
+          AB4-204
+        </div>
+      </td>
+
+      <td *ngFor="let a of thursdayClassRoomDetails4204">
+        <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
+        <b>Course code:</b> {{a.courseCode }}<br>
+        <b>Lavel :</b> {{ a.label }}<br>
+        <b>Section:</b> {{ a.section }}<br>
+        <b>FM:</b> {{a.facultyMember }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.roomNo"><i class="fas fa-plus-circle plusIcon"></i></a>
+      </td>
+    </tr>
+
+    <!--------------------------------------------------------------AB4 -503----------------------------------->
+    <tr>
+      <td class="text-center">
+        <div>
+          AB4-503
+        </div>
+      </td>
+
+      <td *ngFor="let a of thursdayClassRoomDetails4503">
+        <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
+        <b>Course code:</b> {{a.courseCode }}<br>
+        <b>Lavel :</b> {{ a.label }}<br>
+        <b>Section:</b> {{ a.section }}<br>
+        <b>FM:</b> {{a.facultyMember }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.roomNo"><i class="fas fa-plus-circle plusIcon"></i></a>
+      </td>
+    </tr>
+    <!--------------------------------------------------------------AB4 -602----------------------------------->
+    <tr>
+      <td class="text-center">
+        <div>
+          AB4-602
+        </div>
+      </td>
+
+      <td *ngFor="let a of thursdayClassRoomDetails4602">
+        <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
+        <b>Course code:</b> {{a.courseCode }}<br>
+        <b>Lavel :</b> {{ a.label }}<br>
+        <b>Section:</b> {{ a.section }}<br>
+        <b>FM:</b> {{a.facultyMember }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.roomNo"><i class="fas fa-plus-circle plusIcon"></i></a>
+      </td>
+    </tr>
+    <!--------------------------------------------------------------AB4 -604----------------------------------->
+    <tr>
+      <td class="text-center">
+        <div>
+          AB4-604
+        </div>
+      </td>
+
+      <td *ngFor="let a of thursdayClassRoomDetails4604">
+        <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
+        <b>Course code:</b> {{a.courseCode }}<br>
+        <b>Lavel :</b> {{ a.label }}<br>
+        <b>Section:</b> {{ a.section }}<br>
+        <b>FM:</b> {{a.facultyMember }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.roomNo"><i class="fas fa-plus-circle plusIcon"></i></a>
+      </td>
+    </tr>
+    <!--------------------------------------------------------------AB1 -103----------------------------------->
+    <tr>
+      <td class="text-center">
+        <div>
+          AB1-103
+        </div>
+      </td>
+
+      <td *ngFor="let a of thursdayClassRoomDetails1103">
+        <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
+        <b>Course code:</b> {{a.courseCode }}<br>
+        <b>Lavel :</b> {{ a.label }}<br>
+        <b>Section:</b> {{ a.section }}<br>
+        <b>FM:</b> {{a.facultyMember }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.roomNo"><i class="fas fa-plus-circle plusIcon"></i></a>
+      </td>
+    </tr>
+    <!--------------------------------------------------------------AB4 -220----------------------------------->
+    <tr>
+      <td class="text-center">
+        <div>
+          AB4-220
+        </div>
+      </td>
+
+      <td *ngFor="let a of thursdayClassRoomDetails4220">
+        <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
+        <b>Course code:</b> {{a.courseCode }}<br>
+        <b>Lavel :</b> {{ a.label }}<br>
+        <b>Section:</b> {{ a.section }}<br>
+        <b>FM:</b> {{a.facultyMember }}
+        <a (click)="setClassSchedule('saturdayR2C5')" *ngIf="!a.roomNo"><i class="fas fa-plus-circle plusIcon"></i></a>
+      </td>
+    </tr>
+
+  </table>
+
+
 </div>
