@@ -16,7 +16,11 @@ import {AccessControlComponent} from './admin/access-control/access-control.comp
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import {CreateRoutineComponent} from './admin/create-routine/create-routine.component';
 import {ReactiveFormsModule} from "@angular/forms";
-import {HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
+import {AuthService} from "./services/auth.service";
+import {AuthGuardServiceGuard} from "./services/auth-guard-service.guard";
+import {AuthInterceptorService} from "./services/auth-interceptor.service";
+import {ManuFacultiesPanelComponent} from './manu-faculties-panel/manu-faculties-panel.component';
 
 
 @NgModule({
@@ -30,7 +34,8 @@ import {HttpClientModule} from "@angular/common/http";
     ProfileComponent,
     DashboardAdminComponent,
     AccessControlComponent,
-    CreateRoutineComponent
+    CreateRoutineComponent,
+    ManuFacultiesPanelComponent
 
   ],
   imports: [
@@ -40,8 +45,14 @@ import {HttpClientModule} from "@angular/common/http";
     ReactiveFormsModule,
     HttpClientModule
 
+
   ],
-  providers: [RoutineService],
+  providers: [RoutineService, AuthService, AuthGuardServiceGuard,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptorService,
+      multi: true
+    }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

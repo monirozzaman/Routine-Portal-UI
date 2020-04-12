@@ -8,22 +8,24 @@ import {AddFacultiesComponent} from "./admin/add-faculties/add-faculties.compone
 import {FacultiesListComponent} from "./admin/faculties-list/faculties-list.component";
 import {AccessControlComponent} from "./admin/access-control/access-control.component";
 import {CreateRoutineComponent} from "./admin/create-routine/create-routine.component";
+import {AuthGuardServiceGuard} from "./services/auth-guard-service.guard";
 
 
 const routes: Routes = [
   {path: '', component: LoginComponent},
   {
-    path: 'dashboard', component: DashboardComponent,
+    path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuardServiceGuard],
     children: [
-      {path: 'profile', component: ProfileComponent},
-      {path: 'admin', component: DashboardAdminComponent},
-      {path: 'add-faculties', component: AddFacultiesComponent},
-      {path: 'faculties-list', component: FacultiesListComponent},
-      {path: 'access-control', component: AccessControlComponent},
-      {path: 'create-new-routine', component: CreateRoutineComponent}
+      {path: 'profile', component: ProfileComponent, canActivate: [AuthGuardServiceGuard],},
+      {path: 'admin', component: DashboardAdminComponent, canActivate: [AuthGuardServiceGuard],},
+      {path: 'add-faculties', component: AddFacultiesComponent, canActivate: [AuthGuardServiceGuard],},
+      {path: 'faculties-list', component: FacultiesListComponent, canActivate: [AuthGuardServiceGuard],},
+      {path: 'access-control', component: AccessControlComponent, canActivate: [AuthGuardServiceGuard],},
+      {path: 'create-new-routine', component: CreateRoutineComponent, canActivate: [AuthGuardServiceGuard],}
 
     ]
-  }
+  },
+  {path: '**', component: LoginComponent}
 ];
 
 @NgModule({

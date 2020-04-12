@@ -1,6 +1,9 @@
 <div class="wrapper ">
-  <div *ngIf="isShowAdminMenu()">
+  <div *ngIf="isShowAdminMenu">
     <app-manu-admin-panel></app-manu-admin-panel>
+  </div>
+  <div *ngIf="isShowFacultiesMenu">
+    <app-manu-faculties-panel></app-manu-faculties-panel>
   </div>
   <div class="main-panel">
     <!-- Navbar -->
