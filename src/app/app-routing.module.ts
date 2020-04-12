@@ -7,6 +7,7 @@ import {DashboardAdminComponent} from "./admin/dashboard-admin/dashboard-admin.c
 import {AddFacultiesComponent} from "./admin/add-faculties/add-faculties.component";
 import {FacultiesListComponent} from "./admin/faculties-list/faculties-list.component";
 import {AccessControlComponent} from "./admin/access-control/access-control.component";
+import {CreateRoutineComponent} from "./admin/create-routine/create-routine.component";
 
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
       {path: 'add-faculties', component: AddFacultiesComponent},
       {path: 'faculties-list', component: FacultiesListComponent},
       {path: 'access-control', component: AccessControlComponent},
+      {path: 'create-new-routine', component: CreateRoutineComponent}
 
     ]
   }

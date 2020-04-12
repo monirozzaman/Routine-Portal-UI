@@ -16,4 +16,5 @@ export class DashboardComponent implements OnInit {
   isShowAdminMenu() {
     return true;
   }
+
 }

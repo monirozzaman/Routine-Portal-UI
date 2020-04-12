@@ -1,0 +1,43 @@
+<!-- Default form register -->
+<div class="container body">
+  <form (ngSubmit)="onSubmit()" [formGroup]="createRoutine">
+
+    <p class="h4 mb-4">Add New Routine</p>
+
+    <div class="form-row mb-4">
+      <div class="col">
+        <label>Routine Version</label>
+        <input class="form-control" formControlName="routineVersion" placeholder="v1.0" required type="text">
+      </div>
+      <div class="col">
+        <label>Effective date</label>
+        <input class="form-control" formControlName="effectiveDate" required type="date">
+      </div>
+    </div>
+    <label>Select Semester</label>
+    <div class="form-group">
+      <select class="form-control" formControlName="semester" required>
+        <option value="spring-2020">Spring-2020</option>
+        <option value="fall-2020">Fall-2020</option>
+        <option value="summer-2020">Summer-2020</option>
+      </select>
+    </div>
+
+    <label>Routine Type</label>
+    <div class="form-group">
+      <select class="form-control" formControlName="routineType" required>
+        <option>Regular</option>
+        <option>Ramadan</option>
+        <option>Custom</option>
+      </select>
+    </div>
+    <div *ngIf="isShow" class="text-center p-1 bg-danger text-light">
+      <small>Please Fill Up properly</small>
+    </div>
+
+    <!-- Sign up button -->
+    <button class="btn btn-info my-4 btn-block" type="submit">Create</button>
+
+  </form>
+  <!-- Default form register -->
+</div>

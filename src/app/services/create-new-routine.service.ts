@@ -1,27 +1,27 @@
-import {Injectable} from '@angular/core';
-import {Observable, of} from "rxjs";
+import {Injectable} from "@angular/core";
+import {Observable} from "rxjs";
+import {formatDate} from "@angular/common";
+import {environment} from "../../environments/environment.prod";
+import {HttpClient} from "@angular/common/http";
 
+@Injectable({providedIn: "root"})
+export class CreateNewRoutineService {
+  constructor(private http: HttpClient) {
+  }
 
-@Injectable()
-export class DashboardAdminService {
-
-
-  public getClassRoomDateAndTime(): Observable<any> {
-
-    const json =
+  public postRoutineForCreate(routineVersion: string, effectiveDate: string, semester: string, routineType: string): Observable<any> {
+    console.log(routineVersion);
+    const cValue = formatDate(new Date(), 'yyyy-MM-dd', 'en-US');
+    const routineJson =
       {
-        "routineId": "f04cf728-4e44-457d-b9a3-677a11436547",
-        "routineVersion": "v1.0",
-        "routinePublisherId": "fdgfdgfdg",
-        "routineSession": "Spring-2020",
-        "routinePublishDate": "01-02-2020",
-        "routineEffectiveDate": "01-02-2020",
+        "routineVersion": routineVersion,
+        "routineSession": semester,
+        "routinePublishDate": cValue,
+        "routineEffectiveDate": effectiveDate,
         "days": [
           {
-            "dayId": "fcc0804f-8cee-441c-a68f-89d05344f641",
             "saturday": [
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-514",
                 "startTime": "08.00",
                 "endTime": "10.00",
@@ -32,7 +32,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-514",
                 "startTime": "10.00",
                 "endTime": "11.30",
@@ -43,7 +42,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-514",
                 "startTime": "11.30",
                 "endTime": "01.00",
@@ -54,7 +52,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-514",
                 "startTime": "01.00",
                 "endTime": "02.30",
@@ -65,7 +62,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-514",
                 "startTime": "02.30",
                 "endTime": "04.00",
@@ -76,7 +72,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-514",
                 "startTime": "04.00",
                 "endTime": "05.30",
@@ -87,7 +82,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-204",
                 "startTime": "08.00",
                 "endTime": "10.00",
@@ -98,7 +92,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-204",
                 "startTime": "10.00",
                 "endTime": "11.30",
@@ -109,7 +102,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-204",
                 "startTime": "11.30",
                 "endTime": "01.00",
@@ -120,7 +112,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-204",
                 "startTime": "01.00",
                 "endTime": "02.30",
@@ -131,7 +122,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-204",
                 "startTime": "02.30",
                 "endTime": "04.00",
@@ -142,7 +132,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-204",
                 "startTime": "04.00",
                 "endTime": "05.30",
@@ -153,7 +142,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-503",
                 "startTime": "08.00",
                 "endTime": "10.00",
@@ -164,7 +152,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-503",
                 "startTime": "10.00",
                 "endTime": "11.30",
@@ -175,7 +162,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-503",
                 "startTime": "11.30",
                 "endTime": "01.00",
@@ -186,7 +172,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-503",
                 "startTime": "01.00",
                 "endTime": "02.30",
@@ -197,7 +182,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-503",
                 "startTime": "02.30",
                 "endTime": "04.00",
@@ -208,7 +192,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-503",
                 "startTime": "04.00",
                 "endTime": "05.30",
@@ -219,7 +202,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-602",
                 "startTime": "08.00",
                 "endTime": "10.00",
@@ -230,7 +212,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-602",
                 "startTime": "10.00",
                 "endTime": "11.30",
@@ -241,7 +222,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-602",
                 "startTime": "11.30",
                 "endTime": "01.00",
@@ -252,7 +232,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-602",
                 "startTime": "01.00",
                 "endTime": "02.30",
@@ -263,7 +242,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-602",
                 "startTime": "02.30",
                 "endTime": "04.00",
@@ -274,7 +252,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-602",
                 "startTime": "04.00",
                 "endTime": "05.30",
@@ -285,7 +262,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-604",
                 "startTime": "08.00",
                 "endTime": "10.00",
@@ -296,7 +272,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-604",
                 "startTime": "10.00",
                 "endTime": "11.30",
@@ -307,7 +282,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-604",
                 "startTime": "11.30",
                 "endTime": "01.00",
@@ -318,7 +292,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-604",
                 "startTime": "01.00",
                 "endTime": "02.30",
@@ -329,7 +302,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-604",
                 "startTime": "02.30",
                 "endTime": "04.00",
@@ -340,7 +312,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-604",
                 "startTime": "04.00",
                 "endTime": "05.30",
@@ -351,7 +322,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB1-103",
                 "startTime": "08.00",
                 "endTime": "10.00",
@@ -362,7 +332,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB1-103",
                 "startTime": "10.00",
                 "endTime": "11.30",
@@ -373,7 +342,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB1-103",
                 "startTime": "11.30",
                 "endTime": "01.00",
@@ -384,7 +352,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB1-103",
                 "startTime": "01.00",
                 "endTime": "02.30",
@@ -395,7 +362,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB1-103",
                 "startTime": "02.30",
                 "endTime": "04.00",
@@ -406,7 +372,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB1-103",
                 "startTime": "04.00",
                 "endTime": "05.30",
@@ -417,7 +382,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-220",
                 "startTime": "08.00",
                 "endTime": "10.00",
@@ -428,7 +392,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-220",
                 "startTime": "10.00",
                 "endTime": "11.30",
@@ -439,7 +402,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-220",
                 "startTime": "11.30",
                 "endTime": "01.00",
@@ -450,7 +412,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-220",
                 "startTime": "01.00",
                 "endTime": "02.30",
@@ -461,7 +422,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-220",
                 "startTime": "02.30",
                 "endTime": "04.00",
@@ -472,7 +432,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-220",
                 "startTime": "04.00",
                 "endTime": "05.30",
@@ -485,7 +444,6 @@ export class DashboardAdminService {
             ],
             "sunday": [
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-514",
                 "startTime": "08.00",
                 "endTime": "10.00",
@@ -496,7 +454,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-514",
                 "startTime": "10.00",
                 "endTime": "11.30",
@@ -507,7 +464,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-514",
                 "startTime": "11.30",
                 "endTime": "01.00",
@@ -518,7 +474,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-514",
                 "startTime": "01.00",
                 "endTime": "02.30",
@@ -529,7 +484,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-514",
                 "startTime": "02.30",
                 "endTime": "04.00",
@@ -540,7 +494,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-514",
                 "startTime": "04.00",
                 "endTime": "05.30",
@@ -551,7 +504,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-204",
                 "startTime": "08.00",
                 "endTime": "10.00",
@@ -562,7 +514,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-204",
                 "startTime": "10.00",
                 "endTime": "11.30",
@@ -573,7 +524,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-204",
                 "startTime": "11.30",
                 "endTime": "01.00",
@@ -584,7 +534,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-204",
                 "startTime": "01.00",
                 "endTime": "02.30",
@@ -595,7 +544,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-204",
                 "startTime": "02.30",
                 "endTime": "04.00",
@@ -606,7 +554,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-204",
                 "startTime": "04.00",
                 "endTime": "05.30",
@@ -617,7 +564,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-503",
                 "startTime": "08.00",
                 "endTime": "10.00",
@@ -628,7 +574,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-503",
                 "startTime": "10.00",
                 "endTime": "11.30",
@@ -639,7 +584,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-503",
                 "startTime": "11.30",
                 "endTime": "01.00",
@@ -650,7 +594,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-503",
                 "startTime": "01.00",
                 "endTime": "02.30",
@@ -661,7 +604,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-503",
                 "startTime": "02.30",
                 "endTime": "04.00",
@@ -672,7 +614,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-503",
                 "startTime": "04.00",
                 "endTime": "05.30",
@@ -683,7 +624,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-602",
                 "startTime": "08.00",
                 "endTime": "10.00",
@@ -694,7 +634,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-602",
                 "startTime": "10.00",
                 "endTime": "11.30",
@@ -705,7 +644,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-602",
                 "startTime": "11.30",
                 "endTime": "01.00",
@@ -716,7 +654,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-602",
                 "startTime": "01.00",
                 "endTime": "02.30",
@@ -727,7 +664,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-602",
                 "startTime": "02.30",
                 "endTime": "04.00",
@@ -738,7 +674,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-602",
                 "startTime": "04.00",
                 "endTime": "05.30",
@@ -749,7 +684,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-604",
                 "startTime": "08.00",
                 "endTime": "10.00",
@@ -760,7 +694,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-604",
                 "startTime": "10.00",
                 "endTime": "11.30",
@@ -771,7 +704,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-604",
                 "startTime": "11.30",
                 "endTime": "01.00",
@@ -782,7 +714,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-604",
                 "startTime": "01.00",
                 "endTime": "02.30",
@@ -793,7 +724,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-604",
                 "startTime": "02.30",
                 "endTime": "04.00",
@@ -804,7 +734,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-604",
                 "startTime": "04.00",
                 "endTime": "05.30",
@@ -815,7 +744,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB1-103",
                 "startTime": "08.00",
                 "endTime": "10.00",
@@ -826,7 +754,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB1-103",
                 "startTime": "10.00",
                 "endTime": "11.30",
@@ -837,7 +764,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB1-103",
                 "startTime": "11.30",
                 "endTime": "01.00",
@@ -848,7 +774,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB1-103",
                 "startTime": "01.00",
                 "endTime": "02.30",
@@ -859,7 +784,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB1-103",
                 "startTime": "02.30",
                 "endTime": "04.00",
@@ -870,7 +794,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB1-103",
                 "startTime": "04.00",
                 "endTime": "05.30",
@@ -881,7 +804,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-220",
                 "startTime": "08.00",
                 "endTime": "10.00",
@@ -892,7 +814,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-220",
                 "startTime": "10.00",
                 "endTime": "11.30",
@@ -903,7 +824,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-220",
                 "startTime": "11.30",
                 "endTime": "01.00",
@@ -914,7 +834,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-220",
                 "startTime": "01.00",
                 "endTime": "02.30",
@@ -925,7 +844,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-220",
                 "startTime": "02.30",
                 "endTime": "04.00",
@@ -936,7 +854,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-220",
                 "startTime": "04.00",
                 "endTime": "05.30",
@@ -949,7 +866,6 @@ export class DashboardAdminService {
             ],
             "monday": [
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-514",
                 "startTime": "08.00",
                 "endTime": "10.00",
@@ -960,7 +876,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-514",
                 "startTime": "10.00",
                 "endTime": "11.30",
@@ -971,7 +886,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-514",
                 "startTime": "11.30",
                 "endTime": "01.00",
@@ -982,7 +896,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-514",
                 "startTime": "01.00",
                 "endTime": "02.30",
@@ -993,7 +906,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-514",
                 "startTime": "02.30",
                 "endTime": "04.00",
@@ -1004,7 +916,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-514",
                 "startTime": "04.00",
                 "endTime": "05.30",
@@ -1015,7 +926,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-204",
                 "startTime": "08.00",
                 "endTime": "10.00",
@@ -1026,7 +936,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-204",
                 "startTime": "10.00",
                 "endTime": "11.30",
@@ -1037,7 +946,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-204",
                 "startTime": "11.30",
                 "endTime": "01.00",
@@ -1048,7 +956,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-204",
                 "startTime": "01.00",
                 "endTime": "02.30",
@@ -1059,7 +966,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-204",
                 "startTime": "02.30",
                 "endTime": "04.00",
@@ -1070,7 +976,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-204",
                 "startTime": "04.00",
                 "endTime": "05.30",
@@ -1081,7 +986,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-503",
                 "startTime": "08.00",
                 "endTime": "10.00",
@@ -1092,7 +996,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-503",
                 "startTime": "10.00",
                 "endTime": "11.30",
@@ -1103,7 +1006,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-503",
                 "startTime": "11.30",
                 "endTime": "01.00",
@@ -1114,7 +1016,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-503",
                 "startTime": "01.00",
                 "endTime": "02.30",
@@ -1125,7 +1026,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-503",
                 "startTime": "02.30",
                 "endTime": "04.00",
@@ -1136,7 +1036,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-503",
                 "startTime": "04.00",
                 "endTime": "05.30",
@@ -1147,7 +1046,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-602",
                 "startTime": "08.00",
                 "endTime": "10.00",
@@ -1158,7 +1056,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-602",
                 "startTime": "10.00",
                 "endTime": "11.30",
@@ -1169,7 +1066,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-602",
                 "startTime": "11.30",
                 "endTime": "01.00",
@@ -1180,7 +1076,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-602",
                 "startTime": "01.00",
                 "endTime": "02.30",
@@ -1191,7 +1086,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-602",
                 "startTime": "02.30",
                 "endTime": "04.00",
@@ -1202,7 +1096,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-602",
                 "startTime": "04.00",
                 "endTime": "05.30",
@@ -1213,7 +1106,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-604",
                 "startTime": "08.00",
                 "endTime": "10.00",
@@ -1224,7 +1116,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-604",
                 "startTime": "10.00",
                 "endTime": "11.30",
@@ -1235,7 +1126,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-604",
                 "startTime": "11.30",
                 "endTime": "01.00",
@@ -1246,7 +1136,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-604",
                 "startTime": "01.00",
                 "endTime": "02.30",
@@ -1257,7 +1146,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-604",
                 "startTime": "02.30",
                 "endTime": "04.00",
@@ -1268,7 +1156,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-604",
                 "startTime": "04.00",
                 "endTime": "05.30",
@@ -1279,7 +1166,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB1-103",
                 "startTime": "08.00",
                 "endTime": "10.00",
@@ -1290,7 +1176,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB1-103",
                 "startTime": "10.00",
                 "endTime": "11.30",
@@ -1301,7 +1186,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB1-103",
                 "startTime": "11.30",
                 "endTime": "01.00",
@@ -1312,7 +1196,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB1-103",
                 "startTime": "01.00",
                 "endTime": "02.30",
@@ -1323,7 +1206,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB1-103",
                 "startTime": "02.30",
                 "endTime": "04.00",
@@ -1334,7 +1216,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB1-103",
                 "startTime": "04.00",
                 "endTime": "05.30",
@@ -1345,7 +1226,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-220",
                 "startTime": "08.00",
                 "endTime": "10.00",
@@ -1356,7 +1236,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-220",
                 "startTime": "10.00",
                 "endTime": "11.30",
@@ -1367,7 +1246,7 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+
                 "roomNo": "AB4-220",
                 "startTime": "11.30",
                 "endTime": "01.00",
@@ -1378,7 +1257,7 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
+
                 "roomNo": "AB4-220",
                 "startTime": "01.00",
                 "endTime": "02.30",
@@ -1389,7 +1268,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-220",
                 "startTime": "02.30",
                 "endTime": "04.00",
@@ -1400,7 +1278,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-220",
                 "startTime": "04.00",
                 "endTime": "05.30",
@@ -1413,7 +1290,6 @@ export class DashboardAdminService {
             ],
             "tuesday": [
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-514",
                 "startTime": "08.00",
                 "endTime": "10.00",
@@ -1424,7 +1300,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-514",
                 "startTime": "10.00",
                 "endTime": "11.30",
@@ -1435,7 +1310,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-514",
                 "startTime": "11.30",
                 "endTime": "01.00",
@@ -1446,7 +1320,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-514",
                 "startTime": "01.00",
                 "endTime": "02.30",
@@ -1457,7 +1330,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-514",
                 "startTime": "02.30",
                 "endTime": "04.00",
@@ -1468,7 +1340,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-514",
                 "startTime": "04.00",
                 "endTime": "05.30",
@@ -1479,7 +1350,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-204",
                 "startTime": "08.00",
                 "endTime": "10.00",
@@ -1490,7 +1360,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-204",
                 "startTime": "10.00",
                 "endTime": "11.30",
@@ -1501,7 +1370,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-204",
                 "startTime": "11.30",
                 "endTime": "01.00",
@@ -1512,7 +1380,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-204",
                 "startTime": "01.00",
                 "endTime": "02.30",
@@ -1523,7 +1390,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-204",
                 "startTime": "02.30",
                 "endTime": "04.00",
@@ -1534,7 +1400,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-204",
                 "startTime": "04.00",
                 "endTime": "05.30",
@@ -1545,7 +1410,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-503",
                 "startTime": "08.00",
                 "endTime": "10.00",
@@ -1556,7 +1420,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-503",
                 "startTime": "10.00",
                 "endTime": "11.30",
@@ -1567,7 +1430,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-503",
                 "startTime": "11.30",
                 "endTime": "01.00",
@@ -1578,7 +1440,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-503",
                 "startTime": "01.00",
                 "endTime": "02.30",
@@ -1589,7 +1450,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-503",
                 "startTime": "02.30",
                 "endTime": "04.00",
@@ -1600,7 +1460,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-503",
                 "startTime": "04.00",
                 "endTime": "05.30",
@@ -1611,7 +1470,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-602",
                 "startTime": "08.00",
                 "endTime": "10.00",
@@ -1622,7 +1480,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-602",
                 "startTime": "10.00",
                 "endTime": "11.30",
@@ -1633,7 +1490,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-602",
                 "startTime": "11.30",
                 "endTime": "01.00",
@@ -1644,7 +1500,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-602",
                 "startTime": "01.00",
                 "endTime": "02.30",
@@ -1655,7 +1510,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-602",
                 "startTime": "02.30",
                 "endTime": "04.00",
@@ -1666,7 +1520,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-602",
                 "startTime": "04.00",
                 "endTime": "05.30",
@@ -1677,7 +1530,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-604",
                 "startTime": "08.00",
                 "endTime": "10.00",
@@ -1688,7 +1540,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-604",
                 "startTime": "10.00",
                 "endTime": "11.30",
@@ -1699,7 +1550,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-604",
                 "startTime": "11.30",
                 "endTime": "01.00",
@@ -1710,7 +1560,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-604",
                 "startTime": "01.00",
                 "endTime": "02.30",
@@ -1721,7 +1570,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-604",
                 "startTime": "02.30",
                 "endTime": "04.00",
@@ -1732,7 +1580,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-604",
                 "startTime": "04.00",
                 "endTime": "05.30",
@@ -1743,7 +1590,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB1-103",
                 "startTime": "08.00",
                 "endTime": "10.00",
@@ -1754,7 +1600,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB1-103",
                 "startTime": "10.00",
                 "endTime": "11.30",
@@ -1765,7 +1610,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB1-103",
                 "startTime": "11.30",
                 "endTime": "01.00",
@@ -1776,7 +1620,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB1-103",
                 "startTime": "01.00",
                 "endTime": "02.30",
@@ -1787,7 +1630,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB1-103",
                 "startTime": "02.30",
                 "endTime": "04.00",
@@ -1798,7 +1640,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB1-103",
                 "startTime": "04.00",
                 "endTime": "05.30",
@@ -1809,7 +1650,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-220",
                 "startTime": "08.00",
                 "endTime": "10.00",
@@ -1820,7 +1660,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-220",
                 "startTime": "10.00",
                 "endTime": "11.30",
@@ -1831,7 +1670,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-220",
                 "startTime": "11.30",
                 "endTime": "01.00",
@@ -1842,7 +1680,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-220",
                 "startTime": "01.00",
                 "endTime": "02.30",
@@ -1853,7 +1690,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-220",
                 "startTime": "02.30",
                 "endTime": "04.00",
@@ -1864,7 +1700,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-220",
                 "startTime": "04.00",
                 "endTime": "05.30",
@@ -1877,7 +1712,6 @@ export class DashboardAdminService {
             ],
             "wednesday": [
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-514",
                 "startTime": "08.00",
                 "endTime": "10.00",
@@ -1888,7 +1722,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-514",
                 "startTime": "10.00",
                 "endTime": "11.30",
@@ -1899,7 +1732,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-514",
                 "startTime": "11.30",
                 "endTime": "01.00",
@@ -1910,7 +1742,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-514",
                 "startTime": "01.00",
                 "endTime": "02.30",
@@ -1921,7 +1752,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-514",
                 "startTime": "02.30",
                 "endTime": "04.00",
@@ -1932,7 +1762,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-514",
                 "startTime": "04.00",
                 "endTime": "05.30",
@@ -1943,7 +1772,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-204",
                 "startTime": "08.00",
                 "endTime": "10.00",
@@ -1954,7 +1782,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-204",
                 "startTime": "10.00",
                 "endTime": "11.30",
@@ -1965,7 +1792,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-204",
                 "startTime": "11.30",
                 "endTime": "01.00",
@@ -1976,7 +1802,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-204",
                 "startTime": "01.00",
                 "endTime": "02.30",
@@ -1987,7 +1812,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-204",
                 "startTime": "02.30",
                 "endTime": "04.00",
@@ -1998,7 +1822,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-204",
                 "startTime": "04.00",
                 "endTime": "05.30",
@@ -2009,7 +1832,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-503",
                 "startTime": "08.00",
                 "endTime": "10.00",
@@ -2020,7 +1842,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-503",
                 "startTime": "10.00",
                 "endTime": "11.30",
@@ -2031,7 +1852,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-503",
                 "startTime": "11.30",
                 "endTime": "01.00",
@@ -2042,7 +1862,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-503",
                 "startTime": "01.00",
                 "endTime": "02.30",
@@ -2053,7 +1872,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-503",
                 "startTime": "02.30",
                 "endTime": "04.00",
@@ -2064,7 +1882,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-503",
                 "startTime": "04.00",
                 "endTime": "05.30",
@@ -2075,7 +1892,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-602",
                 "startTime": "08.00",
                 "endTime": "10.00",
@@ -2086,7 +1902,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-602",
                 "startTime": "10.00",
                 "endTime": "11.30",
@@ -2097,7 +1912,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-602",
                 "startTime": "11.30",
                 "endTime": "01.00",
@@ -2108,7 +1922,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-602",
                 "startTime": "01.00",
                 "endTime": "02.30",
@@ -2119,7 +1932,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-602",
                 "startTime": "02.30",
                 "endTime": "04.00",
@@ -2130,7 +1942,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-602",
                 "startTime": "04.00",
                 "endTime": "05.30",
@@ -2141,7 +1952,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-604",
                 "startTime": "08.00",
                 "endTime": "10.00",
@@ -2152,7 +1962,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-604",
                 "startTime": "10.00",
                 "endTime": "11.30",
@@ -2163,7 +1972,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-604",
                 "startTime": "11.30",
                 "endTime": "01.00",
@@ -2174,7 +1982,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-604",
                 "startTime": "01.00",
                 "endTime": "02.30",
@@ -2185,7 +1992,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-604",
                 "startTime": "02.30",
                 "endTime": "04.00",
@@ -2196,7 +2002,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-604",
                 "startTime": "04.00",
                 "endTime": "05.30",
@@ -2207,7 +2012,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB1-103",
                 "startTime": "08.00",
                 "endTime": "10.00",
@@ -2218,7 +2022,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB1-103",
                 "startTime": "10.00",
                 "endTime": "11.30",
@@ -2229,7 +2032,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB1-103",
                 "startTime": "11.30",
                 "endTime": "01.00",
@@ -2240,7 +2042,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB1-103",
                 "startTime": "01.00",
                 "endTime": "02.30",
@@ -2251,7 +2052,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB1-103",
                 "startTime": "02.30",
                 "endTime": "04.00",
@@ -2262,7 +2062,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB1-103",
                 "startTime": "04.00",
                 "endTime": "05.30",
@@ -2273,7 +2072,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-220",
                 "startTime": "08.00",
                 "endTime": "10.00",
@@ -2284,7 +2082,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-220",
                 "startTime": "10.00",
                 "endTime": "11.30",
@@ -2295,7 +2092,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-220",
                 "startTime": "11.30",
                 "endTime": "01.00",
@@ -2306,7 +2102,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-220",
                 "startTime": "01.00",
                 "endTime": "02.30",
@@ -2317,7 +2112,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-220",
                 "startTime": "02.30",
                 "endTime": "04.00",
@@ -2328,7 +2122,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-220",
                 "startTime": "04.00",
                 "endTime": "05.30",
@@ -2341,7 +2134,6 @@ export class DashboardAdminService {
             ],
             "thursday": [
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-514",
                 "startTime": "08.00",
                 "endTime": "10.00",
@@ -2352,7 +2144,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-514",
                 "startTime": "10.00",
                 "endTime": "11.30",
@@ -2363,7 +2154,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-514",
                 "startTime": "11.30",
                 "endTime": "01.00",
@@ -2374,7 +2164,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-514",
                 "startTime": "01.00",
                 "endTime": "02.30",
@@ -2385,7 +2174,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-514",
                 "startTime": "02.30",
                 "endTime": "04.00",
@@ -2396,7 +2184,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-514",
                 "startTime": "04.00",
                 "endTime": "05.30",
@@ -2407,7 +2194,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-204",
                 "startTime": "08.00",
                 "endTime": "10.00",
@@ -2418,7 +2204,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-204",
                 "startTime": "10.00",
                 "endTime": "11.30",
@@ -2429,7 +2214,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-204",
                 "startTime": "11.30",
                 "endTime": "01.00",
@@ -2440,7 +2224,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-204",
                 "startTime": "01.00",
                 "endTime": "02.30",
@@ -2451,7 +2234,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-204",
                 "startTime": "02.30",
                 "endTime": "04.00",
@@ -2462,7 +2244,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-204",
                 "startTime": "04.00",
                 "endTime": "05.30",
@@ -2473,7 +2254,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-503",
                 "startTime": "08.00",
                 "endTime": "10.00",
@@ -2484,7 +2264,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-503",
                 "startTime": "10.00",
                 "endTime": "11.30",
@@ -2495,7 +2274,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-503",
                 "startTime": "11.30",
                 "endTime": "01.00",
@@ -2506,7 +2284,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-503",
                 "startTime": "01.00",
                 "endTime": "02.30",
@@ -2517,7 +2294,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-503",
                 "startTime": "02.30",
                 "endTime": "04.00",
@@ -2528,7 +2304,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-503",
                 "startTime": "04.00",
                 "endTime": "05.30",
@@ -2539,7 +2314,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-602",
                 "startTime": "08.00",
                 "endTime": "10.00",
@@ -2550,7 +2324,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-602",
                 "startTime": "10.00",
                 "endTime": "11.30",
@@ -2561,7 +2334,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-602",
                 "startTime": "11.30",
                 "endTime": "01.00",
@@ -2572,7 +2344,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-602",
                 "startTime": "01.00",
                 "endTime": "02.30",
@@ -2583,7 +2354,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-602",
                 "startTime": "02.30",
                 "endTime": "04.00",
@@ -2594,7 +2364,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-602",
                 "startTime": "04.00",
                 "endTime": "05.30",
@@ -2605,7 +2374,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-604",
                 "startTime": "08.00",
                 "endTime": "10.00",
@@ -2616,7 +2384,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-604",
                 "startTime": "10.00",
                 "endTime": "11.30",
@@ -2627,7 +2394,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-604",
                 "startTime": "11.30",
                 "endTime": "01.00",
@@ -2638,7 +2404,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-604",
                 "startTime": "01.00",
                 "endTime": "02.30",
@@ -2649,7 +2414,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-604",
                 "startTime": "02.30",
                 "endTime": "04.00",
@@ -2660,7 +2424,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-604",
                 "startTime": "04.00",
                 "endTime": "05.30",
@@ -2671,7 +2434,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB1-103",
                 "startTime": "08.00",
                 "endTime": "10.00",
@@ -2682,7 +2444,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB1-103",
                 "startTime": "10.00",
                 "endTime": "11.30",
@@ -2693,7 +2454,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB1-103",
                 "startTime": "11.30",
                 "endTime": "01.00",
@@ -2704,7 +2464,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB1-103",
                 "startTime": "01.00",
                 "endTime": "02.30",
@@ -2715,7 +2474,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB1-103",
                 "startTime": "02.30",
                 "endTime": "04.00",
@@ -2726,7 +2484,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB1-103",
                 "startTime": "04.00",
                 "endTime": "05.30",
@@ -2737,7 +2494,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-220",
                 "startTime": "08.00",
                 "endTime": "10.00",
@@ -2748,7 +2504,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-220",
                 "startTime": "10.00",
                 "endTime": "11.30",
@@ -2759,7 +2514,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-220",
                 "startTime": "11.30",
                 "endTime": "01.00",
@@ -2770,7 +2524,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-220",
                 "startTime": "01.00",
                 "endTime": "02.30",
@@ -2781,7 +2534,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-220",
                 "startTime": "02.30",
                 "endTime": "04.00",
@@ -2792,7 +2544,6 @@ export class DashboardAdminService {
                 "facultyMemberEmployeeId": "Not Occupied"
               },
               {
-                "classDetailsId": "38dddd4c-7d3b-4ce0-ace6-e890b2b7d86a",
                 "roomNo": "AB4-220",
                 "startTime": "04.00",
                 "endTime": "05.30",
@@ -2805,9 +2556,11 @@ export class DashboardAdminService {
             ]
           }
         ]
-      }
-    ;
+      };
+    const createRoutineApi: string = environment.itvillage.baseApiEndPoint + 'admin/routine/create';
 
-    return of(json);
+    return this.http.post(createRoutineApi, routineJson);
+
   }
+
 }

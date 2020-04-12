@@ -10,9 +10,13 @@ import {AddFacultiesComponent} from './admin/add-faculties/add-faculties.compone
 import {FacultiesListComponent} from './admin/faculties-list/faculties-list.component';
 import {ProfileComponent} from './profile/profile.component';
 import {DashboardAdminComponent} from './admin/dashboard-admin/dashboard-admin.component';
-import {DashboardAdminService} from "./services/dashboard.admin.service";
+import {RoutineService} from "./services/routine.service";
 import {AccessControlComponent} from './admin/access-control/access-control.component';
-import {ModalModule} from "angular-custom-modal";
+
+import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
+import {CreateRoutineComponent} from './admin/create-routine/create-routine.component';
+import {ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
@@ -25,15 +29,19 @@ import {ModalModule} from "angular-custom-modal";
     FacultiesListComponent,
     ProfileComponent,
     DashboardAdminComponent,
-    AccessControlComponent
+    AccessControlComponent,
+    CreateRoutineComponent
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ModalModule
+    NgbModule,
+    ReactiveFormsModule,
+    HttpClientModule
+
   ],
-  providers: [DashboardAdminService],
+  providers: [RoutineService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

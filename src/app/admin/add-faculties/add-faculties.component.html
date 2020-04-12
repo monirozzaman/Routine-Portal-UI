@@ -1,28 +1,28 @@
 <!-- Default form register -->
 <div class="container body">
-  <form action="#!" class="text-center border border-light p-5">
+  <form (ngSubmit)="onSubmit()" [formGroup]="addFaculties" class="text-center border border-light p-5">
 
     <p class="h4 mb-4">Add New Faculties</p>
 
     <div class="form-row mb-4">
       <div class="col">
         <!-- First name -->
-        <input class="form-control" id="defaultRegisterFormFirstName" placeholder="Full Name" type="text">
+        <input class="form-control" formControlName="fullName" placeholder="Full Name" type="text">
       </div>
       <div class="col">
         <!-- Last name -->
-        <input class="form-control" id="defaultRegisterFormLastName" placeholder="Teacher Initial " type="text">
+        <input class="form-control" formControlName="teacherInitial" placeholder="Teacher Initial " type="text">
       </div>
     </div>
 
     <!-- Degisnation -->
-    <input class="form-control mb-4" id="defaultRegisterFormEmail" placeholder="Designation" type="text">
+    <input class="form-control mb-4" formControlName="designation" placeholder="Designation" type="text">
 
 
     <!-- Department Name -->
     <div class="form-group">
       <small>*select Department</small>
-      <select class="form-control" id="dprtname">
+      <select class="form-control" formControlName="dept">
         <option>Department Of SWE</option>
         <option>Department Of CSE</option>
         <option>Department Of EEE</option>
@@ -32,12 +32,12 @@
     </div>
 
     <!-- Degisnation -->
-    <input class="form-control mb-4" id="defaultRegisterFormEmployeeid" placeholder="Employee Id" type="text">
+    <input class="form-control mb-4" formControlName="employeeId" placeholder="Employee Id" type="text">
 
 
     <div class="form-group">
       <small>*select Faculties Type</small>
-      <select class="form-control" id="sel1">
+      <select class="form-control" formControlName="facultyLabel">
         <option>Senior faculty</option>
         <option>Junior faculty</option>
         <option>Intern faculty</option>
@@ -45,32 +45,19 @@
 
     </div>
     <!-- Phone number -->
-    <input aria-describedby="defaultRegisterFormPhoneHelpBlock" class="form-control mb-4"
-           id="defaultRegisterPhonePassword" placeholder="Phone number"
-           type="text">
+    <input aria-describedby="defaultRegisterFormPhoneHelpBlock" class="form-control mb-4" formControlName="phoneNumber"
+           placeholder="Phone number" type="text">
     <!-- Email number -->
-    <input aria-describedby="defaultRegisterFormPhoneHelpBlock" class="form-control mb-4" id="defaultRegisteEmail"
-           placeholder="Email"
-           type="email">
+    <input aria-describedby="defaultRegisterFormPhoneHelpBlock" class="form-control mb-4" formControlName="email"
+           placeholder="Email" type="email">
     <!-- Pass number -->
-    <input aria-describedby="defaultRegisterFormPhoneHelpBlock" class="form-control mb-4" id="defaultRegistePassword"
-           placeholder="Ser Initial Password"
-           type="Password">
+    <input aria-describedby="defaultRegisterFormPhoneHelpBlock" class="form-control mb-4" formControlName="password"
+           placeholder="Ser Initial Password" type="Password">
 
-    <!-- Newsletter -->
-    <div class="custom-control custom-checkbox">
-      <input class="custom-control-input" id="defaultRegisterFormNewsletter" type="checkbox">
-      <label class="custom-control-label" for="defaultRegisterFormNewsletter">Sand Mail</label>
-    </div>
 
     <!-- Sign up button -->
     <button class="btn btn-info my-4 btn-block" type="submit">Active Account & Sand Activation mail</button>
 
-
-    <!-- Terms of service -->
-    <p>By clicking
-      <em>Sign up</em> you agree to our
-      <a href="" target="_blank">terms of service</a>
 
   </form>
   <!-- Default form register -->

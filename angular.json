@@ -120,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "RoutinePortal"
+    }
+  },
+  "defaultProject": "RoutinePortal",
+  "cli": {
+    "analytics": "49586c22-c282-46de-be10-3d4ef88b7ef0"
+  }
 }

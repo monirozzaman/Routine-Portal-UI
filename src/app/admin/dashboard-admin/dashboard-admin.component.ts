@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {DashboardAdminService} from "../../services/dashboard.admin.service";
+import {RoutineService} from "../../services/routine.service";
 import {ClassRoom} from "../../model/class.room";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-dashboard-admin',
@@ -9,62 +10,62 @@ import {ClassRoom} from "../../model/class.room";
 })
 export class DashboardAdminComponent implements OnInit {
 
-  private saturdayClassRoomDetails4514: Array<ClassRoom> = [];
-  private saturdayClassRoomDetails4204: Array<ClassRoom> = [];
-  private saturdayClassRoomDetails4503: Array<ClassRoom> = [];
-  private saturdayClassRoomDetails4602: Array<ClassRoom> = [];
-  private saturdayClassRoomDetails4604: Array<ClassRoom> = [];
-  private saturdayClassRoomDetails1103: Array<ClassRoom> = [];
-  private saturdayClassRoomDetails4220: Array<ClassRoom> = [];
+  saturdayClassRoomDetails4514: Array<ClassRoom> = [];
+  saturdayClassRoomDetails4204: Array<ClassRoom> = [];
+  saturdayClassRoomDetails4503: Array<ClassRoom> = [];
+  saturdayClassRoomDetails4602: Array<ClassRoom> = [];
+  saturdayClassRoomDetails4604: Array<ClassRoom> = [];
+  saturdayClassRoomDetails1103: Array<ClassRoom> = [];
+  saturdayClassRoomDetails4220: Array<ClassRoom> = [];
 
 
-  private sundayClassRoomDetails4514: Array<any> = [];
-  private sundayClassRoomDetails4204: Array<any> = [];
-  private sundayClassRoomDetails4503: Array<any> = [];
-  private sundayClassRoomDetails4602: Array<any> = [];
-  private sundayClassRoomDetails4604: Array<any> = [];
-  private sundayClassRoomDetails1103: Array<any> = [];
-  private sundayClassRoomDetails4220: Array<any> = [];
+  sundayClassRoomDetails4514: Array<any> = [];
+  sundayClassRoomDetails4204: Array<any> = [];
+  sundayClassRoomDetails4503: Array<any> = [];
+  sundayClassRoomDetails4604: Array<any> = [];
+  sundayClassRoomDetails4602: Array<any> = [];
+  sundayClassRoomDetails1103: Array<any> = [];
+  sundayClassRoomDetails4220: Array<any> = [];
 
-  private mondayClassRoomDetails4514: Array<any> = [];
-  private mondayClassRoomDetails4204: Array<any> = [];
-  private mondayClassRoomDetails4503: Array<any> = [];
-  private mondayClassRoomDetails4602: Array<any> = [];
-  private mondayClassRoomDetails4604: Array<any> = [];
-  private mondayClassRoomDetails1103: Array<any> = [];
-  private mondayClassRoomDetails4220: Array<any> = [];
-
-
-  private tuesdayClassRoomDetails4514: Array<any> = [];
-  private tuesdayClassRoomDetails4204: Array<any> = [];
-  private tuesdayClassRoomDetails4503: Array<any> = [];
-  private tuesdayClassRoomDetails4602: Array<any> = [];
-  private tuesdayClassRoomDetails4604: Array<any> = [];
-  private tuesdayClassRoomDetails1103: Array<any> = [];
-  private tuesdayClassRoomDetails4220: Array<any> = [];
-
-  private wednesdayClassRoomDetails4514: Array<any> = [];
-  private wednesdayClassRoomDetails4204: Array<any> = [];
-  private wednesdayClassRoomDetails4503: Array<any> = [];
-  private wednesdayClassRoomDetails4602: Array<any> = [];
-  private wednesdayClassRoomDetails4604: Array<any> = [];
-  private wednesdayClassRoomDetails1103: Array<any> = [];
-  private wednesdayClassRoomDetails4220: Array<any> = [];
+  mondayClassRoomDetails4514: Array<any> = [];
+  mondayClassRoomDetails4503: Array<any> = [];
+  mondayClassRoomDetails4602: Array<any> = [];
+  mondayClassRoomDetails4204: Array<any> = [];
+  mondayClassRoomDetails4604: Array<any> = [];
+  mondayClassRoomDetails1103: Array<any> = [];
+  mondayClassRoomDetails4220: Array<any> = [];
 
 
-  private thursdayClassRoomDetails4514: Array<any> = [];
-  private thursdayClassRoomDetails4204: Array<any> = [];
-  private thursdayClassRoomDetails4503: Array<any> = [];
-  private thursdayClassRoomDetails4602: Array<any> = [];
-  private thursdayClassRoomDetails4604: Array<any> = [];
-  private thursdayClassRoomDetails1103: Array<any> = [];
-  private thursdayClassRoomDetails4220: Array<any> = [];
+  tuesdayClassRoomDetails4514: Array<any> = [];
+  tuesdayClassRoomDetails4204: Array<any> = [];
+  tuesdayClassRoomDetails4503: Array<any> = [];
+  tuesdayClassRoomDetails4602: Array<any> = [];
+  tuesdayClassRoomDetails4604: Array<any> = [];
+  tuesdayClassRoomDetails1103: Array<any> = [];
+  tuesdayClassRoomDetails4220: Array<any> = [];
+
+  wednesdayClassRoomDetails4514: Array<any> = [];
+  wednesdayClassRoomDetails4204: Array<any> = [];
+  wednesdayClassRoomDetails4503: Array<any> = [];
+  wednesdayClassRoomDetails4602: Array<any> = [];
+  wednesdayClassRoomDetails4604: Array<any> = [];
+  wednesdayClassRoomDetails1103: Array<any> = [];
+  wednesdayClassRoomDetails4220: Array<any> = [];
 
 
-  private timesArray: Array<any> = [];
-  private daysArray: Array<String> = ["Saturday", 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday']
+  thursdayClassRoomDetails4514: Array<any> = [];
+  thursdayClassRoomDetails4204: Array<any> = [];
+  thursdayClassRoomDetails4503: Array<any> = [];
+  thursdayClassRoomDetails4602: Array<any> = [];
+  thursdayClassRoomDetails4604: Array<any> = [];
+  thursdayClassRoomDetails1103: Array<any> = [];
+  thursdayClassRoomDetails4220: Array<any> = [];
 
-  constructor(private dashboardAdminService: DashboardAdminService) {
+
+  timesArray: Array<any> = [];
+  daysArray: Array<String> = ["Saturday", 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday']
+
+  constructor(private dashboardAdminService: RoutineService, private router: Router) {
   }
 
   ngOnInit() {
@@ -451,6 +452,11 @@ export class DashboardAdminComponent implements OnInit {
     //this.saturdayClassRoomDetails=  Object.values(this.saturdayClassRoomDetails.reduce((previousValue, currentValue) => Object.assign(previousValue,{[currentValue.startTime]: currentValue}),{}));
     console.log(this.saturdayClassRoomDetails4514);
 
+  }
+
+  addNewRoutine() {
+    console.log("Console");
+    this.router.navigate(['dashboard/create-new-routine'])
   }
 
 }

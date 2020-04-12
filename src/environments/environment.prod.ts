@@ -1,3 +1,6 @@
 export const environment = {
-  production: true
+  production: true,
+  itvillage: {
+    baseApiEndPoint: 'http://localhost:20221/'
+  }
 };
