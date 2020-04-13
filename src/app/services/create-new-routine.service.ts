@@ -2557,10 +2557,15 @@ export class CreateNewRoutineService {
           }
         ]
       };
-    const createRoutineApi: string = environment.itvillage.baseApiEndPoint + 'admin/routine/create';
+    const createRoutineApi: string = environment.itvillage.baseApiEndPoint + 'admin/routine';
 
     return this.http.post(createRoutineApi, routineJson);
 
   }
 
+  deleteAllRoutine(): Observable<any> {
+
+    const createRoutineApi: string = environment.itvillage.baseApiEndPoint + 'admin/routine';
+    return this.http.delete(createRoutineApi);
+  }
 }

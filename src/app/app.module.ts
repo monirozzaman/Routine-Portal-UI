@@ -21,6 +21,8 @@ import {AuthService} from "./services/auth.service";
 import {AuthGuardServiceGuard} from "./services/auth-guard-service.guard";
 import {AuthInterceptorService} from "./services/auth-interceptor.service";
 import {ManuFacultiesPanelComponent} from './manu-faculties-panel/manu-faculties-panel.component';
+import {UpdateMyClassComponent} from './update-my-class/update-my-class.component';
+import {MyRoutineComponent} from "./faculies/my-routine/my-routine.component";
 
 
 @NgModule({
@@ -35,7 +37,9 @@ import {ManuFacultiesPanelComponent} from './manu-faculties-panel/manu-faculties
     DashboardAdminComponent,
     AccessControlComponent,
     CreateRoutineComponent,
-    ManuFacultiesPanelComponent
+    ManuFacultiesPanelComponent,
+    UpdateMyClassComponent,
+    MyRoutineComponent
 
   ],
   imports: [

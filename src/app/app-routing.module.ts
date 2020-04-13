@@ -9,6 +9,7 @@ import {FacultiesListComponent} from "./admin/faculties-list/faculties-list.comp
 import {AccessControlComponent} from "./admin/access-control/access-control.component";
 import {CreateRoutineComponent} from "./admin/create-routine/create-routine.component";
 import {AuthGuardServiceGuard} from "./services/auth-guard-service.guard";
+import {UpdateMyClassComponent} from "./update-my-class/update-my-class.component";
 
 
 const routes: Routes = [
@@ -21,7 +22,8 @@ const routes: Routes = [
       {path: 'add-faculties', component: AddFacultiesComponent, canActivate: [AuthGuardServiceGuard],},
       {path: 'faculties-list', component: FacultiesListComponent, canActivate: [AuthGuardServiceGuard],},
       {path: 'access-control', component: AccessControlComponent, canActivate: [AuthGuardServiceGuard],},
-      {path: 'create-new-routine', component: CreateRoutineComponent, canActivate: [AuthGuardServiceGuard],}
+      {path: 'create-new-routine', component: CreateRoutineComponent, canActivate: [AuthGuardServiceGuard],},
+      {path: 'update-my-class', component: UpdateMyClassComponent, canActivate: [AuthGuardServiceGuard],}
 
     ]
   },

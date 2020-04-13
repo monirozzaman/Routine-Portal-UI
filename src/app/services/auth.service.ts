@@ -35,7 +35,7 @@ export class AuthService {
   }
 
   getLoggedEmployeeId() {
-    return localStorage.getItem('token');
+    return localStorage.getItem('employeeId');
   }
   public getAuthTokenScopes(): string[] {
 
@@ -44,5 +44,9 @@ export class AuthService {
     let decodedJwtData = JSON.parse(decodedJwtJsonData);
     let roles = decodedJwtData.scopes
     return roles;
+  }
+
+  getLoggedEmployeeInitialName() {
+    return localStorage.getItem('teacherInitial');
   }
 }

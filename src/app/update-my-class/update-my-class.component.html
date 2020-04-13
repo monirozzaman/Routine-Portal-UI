@@ -1,0 +1,46 @@
+<!-- Default form register -->
+<div class="container body">
+  <form (ngSubmit)="onSubmit()" [formGroup]="addMyClass" class="text-center border border-light p-5">
+
+    <p class="h2 mb-4 header-fonts">Set My <span style="color: red">C</span>lass</p>
+
+    <!--    <div class="form-row mb-4">
+          <div class="col">
+            <label>Start Time</label>
+            <input class="form-control" formControlName="sTime" placeholder="Full Name" type="time" [(ngModel)]="sTimesp">
+          </div>
+          <div class="col">
+            <label>End Time</label>
+            <input class="form-control" formControlName="eTime" placeholder="Teacher Initial " type="time" [(ngModel)]="eTimesp">
+          </div>
+        </div>-->
+
+    <label>Select Label</label>
+    <div class="form-group">
+      <select [(ngModel)]="labelssp" class="form-control" formControlName="labels">
+        <option *ngFor="let label of labels" [value]="label">  {{label}}</option>
+      </select>
+    </div>
+
+    <label>Select Course</label>
+    <div class="form-group">
+      <select [(ngModel)]="coursessp" class="form-control" formControlName="courses" required>
+        <option *ngFor="let course of courses" [value]="course">  {{course}}</option>
+      </select>
+    </div>
+
+    <label>Select Section</label>
+    <div class="form-group">
+      <select [(ngModel)]="sectionssp" class="form-control" formControlName="sections">
+        <option *ngFor="let section of sections" [selected]="section === sectionssp"
+                [value]="section">  {{section}}</option>
+      </select>
+    </div>
+
+    <!-- Sign up button -->
+    <button class="btn btn-info my-4 btn-block" type="submit">Post</button>
+
+
+  </form>
+  <!-- Default form register -->
+</div>

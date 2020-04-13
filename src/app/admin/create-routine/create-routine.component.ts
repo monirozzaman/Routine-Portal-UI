@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup} from "@angular/forms";
 import {CreateNewRoutineService} from "../../services/create-new-routine.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-create-routine',
@@ -15,7 +16,7 @@ export class CreateRoutineComponent implements OnInit {
   routineType: string;
   isShow: boolean;
 
-  constructor(private formBuilder: FormBuilder, private createNewRoutineService: CreateNewRoutineService) {
+  constructor(private formBuilder: FormBuilder, private createNewRoutineService: CreateNewRoutineService, private router: Router) {
   }
 
   ngOnInit(): void {
@@ -35,11 +36,14 @@ export class CreateRoutineComponent implements OnInit {
     this.effectiveDate = this.createRoutine.controls['effectiveDate'].value;
     this.semester = this.createRoutine.controls['semester'].value;
     this.routineType = this.createRoutine.controls['routineType'].value;
-
+    console.log(this.semester)
     if (this.routineVersion != '' && this.effectiveDate != '' && this.semester != '' && this.routineType != '') {
+      this.createNewRoutineService.deleteAllRoutine().subscribe(res => {
+        console.log("clean up done");
+      });
       this.createNewRoutineService.postRoutineForCreate(this.routineVersion, this.effectiveDate,
         this.semester, this.routineType).subscribe(res => {
-        console.log(res);
+        this.router.navigate(['dashboard/admin']);
       });
       this.isShow = false;
     } else {

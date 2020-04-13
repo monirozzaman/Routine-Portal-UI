@@ -67,9 +67,11 @@ export class DashboardAdminComponent implements OnInit {
   routineSemester: string;
   routineEffectiveDate: string;
   routinePublishDate: string;
+  routineId: string;
+  show: boolean = false;
   daysArray: Array<String> = ["Saturday", 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday']
 
-  constructor(private dashboardAdminService: RoutineService, private router: Router, private  authService: AuthService) {
+  constructor(private routineService: RoutineService, private router: Router, private  authService: AuthService) {
   }
 
   ngOnInit() {
@@ -84,10 +86,11 @@ export class DashboardAdminComponent implements OnInit {
   }
 
   getClassDetails() {
-    this.dashboardAdminService.getClassRoomDateAndTime().subscribe(res => {
+    this.routineService.getClassRoomDateAndTime().subscribe(res => {
       this.routineSemester = res.routineSession;
       this.routineEffectiveDate = res.routineEffectiveDate;
       this.routinePublishDate = res.routinePublishDate;
+      this.routineId = res.routineId;
       res.days.forEach(dayWise => {
         /*----------------------For Saturday--------------------------------*/
         dayWise.saturday.forEach(day => {
@@ -462,14 +465,17 @@ export class DashboardAdminComponent implements OnInit {
 
   addNewRoutine() {
     console.log("Console");
-    this.router.navigate(['dashboard/create-new-routine'])
+    this.router.navigate(['dashboard/create-new-routine'], {queryParams: {routineId: this.routineId}});
   }
 
-  setMyClass(classId: string, creatorFacultyMemberEmployeeId: string) {
-    if (creatorFacultyMemberEmployeeId === this.authService.getLoggedEmployeeId() || creatorFacultyMemberEmployeeId === 'Not Occupied') {
-      console.log(classId);
-    } else {
+  setMyClass(classId: string, creatorFacultyMemberEmployeeId: string, day: string, roomNo: string) {
 
+    if (creatorFacultyMemberEmployeeId === this.authService.getLoggedEmployeeId() || creatorFacultyMemberEmployeeId === 'Not Occupied') {
+      this.router.navigate(['dashboard/update-my-class'], {queryParams: {day: day, classId: classId, room: roomNo}});
+      this.show = false;
+    } else {
+      this.show = false;
+      this.show = true;
     }
     console.log("404");
   }

@@ -2,6 +2,8 @@ import {Injectable} from '@angular/core';
 import {Observable} from "rxjs";
 import {HttpClient} from "@angular/common/http";
 import {environment} from "../../environments/environment.prod";
+import {AuthService} from "./auth.service";
+import {Router} from "@angular/router";
 
 
 @Injectable()
@@ -9,7 +11,7 @@ export class RoutineService {
 
   baseUrl: string = environment.itvillage.baseApiEndPoint;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private authService: AuthService, private router: Router) {
   }
 
 
@@ -2819,5 +2821,28 @@ export class RoutineService {
     // ;
     //
     // return of(json);
+  }
+
+  public updateMyClass(sTimes: string, eTimes: string, roomss: string, labelss: string, coursess: string, sectionss: string,
+                       day: string, classId: string): Observable<any> {
+
+    const classUpdateUrl = this.baseUrl + 'my/routine';
+    const body = {
+      "classDetailsId": classId,
+      "roomNo": roomss,
+      "startTime": sTimes,
+      "endTime": eTimes,
+      "label": labelss,
+      "courseCode": coursess,
+      "section": sectionss,
+      "facultyMember": this.authService.getLoggedEmployeeInitialName(),
+      "dayName": day
+    };
+    return this.http.put(classUpdateUrl, body)
+  }
+
+  getPresentClassDetails(day: string, classId: string): Observable<any> {
+    const getClassDetailsUrl = this.baseUrl + 'my/' + day + '/class/' + classId;
+    return this.http.get(getClassDetailsUrl);
   }
 }

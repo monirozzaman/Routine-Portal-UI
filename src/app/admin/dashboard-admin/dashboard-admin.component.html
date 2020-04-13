@@ -12,7 +12,9 @@
         <button class="btn btn-danger" type="button">Delete</button>
       </div>
     </div>
-
+    <div *ngIf="show" class="alert alert-warning" role="alert">
+      Sorry ,This slot Already Taken.Let's see another one...
+    </div>
 
     <table class="table table-bordered">
 
@@ -28,7 +30,7 @@
           </div>
         </td>
         <td *ngFor="let a of saturdayClassRoomDetails4514">
-          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId)">
+          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId,'saturday','AB4-514')">
             <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
             <b>Course code:</b> {{a.courseCode }}<br>
             <b>Label :</b> {{ a.label }}<br>
@@ -48,7 +50,7 @@
         </td>
 
         <td *ngFor="let a of saturdayClassRoomDetails4204">
-          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId)">
+          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId,'saturday','AB4-204')">
             <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
             <b>Course code:</b> {{a.courseCode }}<br>
             <b>Lavel :</b> {{ a.label }}<br>
@@ -68,7 +70,7 @@
         </td>
 
         <td *ngFor="let a of saturdayClassRoomDetails4503">
-          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId)">
+          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId,'saturday','AB4-503')">
             <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
             <b>Course code:</b> {{a.courseCode }}<br>
             <b>Lavel :</b> {{ a.label }}<br>
@@ -87,7 +89,7 @@
         </td>
 
         <td *ngFor="let a of saturdayClassRoomDetails4602">
-          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId)">
+          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId,'saturday','AB4-602')">
             <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
             <b>Course code:</b> {{a.courseCode }}<br>
             <b>Lavel :</b> {{ a.label }}<br>
@@ -106,7 +108,7 @@
         </td>
 
         <td *ngFor="let a of saturdayClassRoomDetails4604">
-          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId)">
+          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId,'saturday','AB4-604')">
             <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
             <b>Course code:</b> {{a.courseCode }}<br>
             <b>Lavel :</b> {{ a.label }}<br>
@@ -125,7 +127,7 @@
         </td>
 
         <td *ngFor="let a of saturdayClassRoomDetails1103">
-          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId)">
+          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId,'saturday','AB1-103')">
             <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
             <b>Course code:</b> {{a.courseCode }}<br>
             <b>Lavel :</b> {{ a.label }}<br>
@@ -144,7 +146,7 @@
         </td>
 
         <td *ngFor="let a of saturdayClassRoomDetails4220">
-          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId)">
+          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId,'saturday','AB4-220')">
             <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
             <b>Course code:</b> {{a.courseCode }}<br>
             <b>Lavel :</b> {{ a.label }}<br>
@@ -175,7 +177,7 @@
           </div>
         </td>
         <td *ngFor="let a of sundayClassRoomDetails4514">
-          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId)">
+          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId,'sunday','AB4-514')">
             <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
             <b>Course code:</b> {{a.courseCode }}<br>
             <b>Label :</b> {{ a.label }}<br>
@@ -195,7 +197,7 @@
         </td>
 
         <td *ngFor="let a of sundayClassRoomDetails4204">
-          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId)">
+          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId,'sunday','AB4-204')">
             <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
             <b>Course code:</b> {{a.courseCode }}<br>
             <b>Lavel :</b> {{ a.label }}<br>
@@ -215,7 +217,7 @@
         </td>
 
         <td *ngFor="let a of sundayClassRoomDetails4503">
-          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId)">
+          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId,'sunday','AB4-503')">
             <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
             <b>Course code:</b> {{a.courseCode }}<br>
             <b>Lavel :</b> {{ a.label }}<br>
@@ -234,7 +236,7 @@
         </td>
 
         <td *ngFor="let a of sundayClassRoomDetails4602">
-          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId)">
+          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId,'sunday','AB4-602')">
             <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
             <b>Course code:</b> {{a.courseCode }}<br>
             <b>Lavel :</b> {{ a.label }}<br>
@@ -253,7 +255,7 @@
         </td>
 
         <td *ngFor="let a of sundayClassRoomDetails4604">
-          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId)">
+          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId,'sunday','AB4-604')">
             <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
             <b>Course code:</b> {{a.courseCode }}<br>
             <b>Lavel :</b> {{ a.label }}<br>
@@ -272,7 +274,7 @@
         </td>
 
         <td *ngFor="let a of sundayClassRoomDetails1103">
-          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId)">
+          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId,'sunday','AB1-103')">
             <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
             <b>Course code:</b> {{a.courseCode }}<br>
             <b>Lavel :</b> {{ a.label }}<br>
@@ -291,7 +293,7 @@
         </td>
 
         <td *ngFor="let a of sundayClassRoomDetails4220">
-          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId)">
+          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId,'sunday','AB4-220')">
             <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
             <b>Course code:</b> {{a.courseCode }}<br>
             <b>Lavel :</b> {{ a.label }}<br>
@@ -322,7 +324,7 @@
           </div>
         </td>
         <td *ngFor="let a of mondayClassRoomDetails4514">
-          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId)">
+          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId,'monday',a.roomNo)">
             <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
             <b>Course code:</b> {{a.courseCode }}<br>
             <b>Label :</b> {{ a.label }}<br>
@@ -342,7 +344,7 @@
         </td>
 
         <td *ngFor="let a of mondayClassRoomDetails4204">
-          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId)">
+          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId,'monday',a.roomNo)">
             <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
             <b>Course code:</b> {{a.courseCode }}<br>
             <b>Lavel :</b> {{ a.label }}<br>
@@ -362,7 +364,7 @@
         </td>
 
         <td *ngFor="let a of mondayClassRoomDetails4503">
-          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId)">
+          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId,'monday',a.roomNo)">
             <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
             <b>Course code:</b> {{a.courseCode }}<br>
             <b>Lavel :</b> {{ a.label }}<br>
@@ -381,7 +383,7 @@
         </td>
 
         <td *ngFor="let a of mondayClassRoomDetails4602">
-          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId)">
+          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId,'monday',a.roomNo)">
             <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
             <b>Course code:</b> {{a.courseCode }}<br>
             <b>Lavel :</b> {{ a.label }}<br>
@@ -400,7 +402,7 @@
         </td>
 
         <td *ngFor="let a of mondayClassRoomDetails4604">
-          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId)">
+          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId,'monday',a.roomNo)">
             <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
             <b>Course code:</b> {{a.courseCode }}<br>
             <b>Lavel :</b> {{ a.label }}<br>
@@ -419,7 +421,7 @@
         </td>
 
         <td *ngFor="let a of mondayClassRoomDetails1103">
-          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId)">
+          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId,'monday',a.roomNo)">
             <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
             <b>Course code:</b> {{a.courseCode }}<br>
             <b>Lavel :</b> {{ a.label }}<br>
@@ -438,7 +440,7 @@
         </td>
 
         <td *ngFor="let a of mondayClassRoomDetails4220">
-          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId)">
+          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId,'monday',a.roomNo)">
             <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
             <b>Course code:</b> {{a.courseCode }}<br>
             <b>Lavel :</b> {{ a.label }}<br>
@@ -469,7 +471,7 @@
           </div>
         </td>
         <td *ngFor="let a of tuesdayClassRoomDetails4514">
-          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId)">
+          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId,'tuesday',a.roomNo)">
             <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
             <b>Course code:</b> {{a.courseCode }}<br>
             <b>Label :</b> {{ a.label }}<br>
@@ -489,7 +491,7 @@
         </td>
 
         <td *ngFor="let a of tuesdayClassRoomDetails4204">
-          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId)">
+          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId,'tuesday',a.roomNo)">
             <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
             <b>Course code:</b> {{a.courseCode }}<br>
             <b>Lavel :</b> {{ a.label }}<br>
@@ -509,7 +511,7 @@
         </td>
 
         <td *ngFor="let a of tuesdayClassRoomDetails4503">
-          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId)">
+          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId,'tuesday',a.roomNo)">
             <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
             <b>Course code:</b> {{a.courseCode }}<br>
             <b>Lavel :</b> {{ a.label }}<br>
@@ -528,7 +530,7 @@
         </td>
 
         <td *ngFor="let a of tuesdayClassRoomDetails4602">
-          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId)">
+          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId,'tuesday',a.roomNo)">
             <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
             <b>Course code:</b> {{a.courseCode }}<br>
             <b>Lavel :</b> {{ a.label }}<br>
@@ -547,7 +549,7 @@
         </td>
 
         <td *ngFor="let a of tuesdayClassRoomDetails4604">
-          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId)">
+          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId,'tuesday',a.roomNo)">
             <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
             <b>Course code:</b> {{a.courseCode }}<br>
             <b>Lavel :</b> {{ a.label }}<br>
@@ -566,7 +568,7 @@
         </td>
 
         <td *ngFor="let a of tuesdayClassRoomDetails1103">
-          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId)">
+          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId,'tuesday',a.roomNo)">
             <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
             <b>Course code:</b> {{a.courseCode }}<br>
             <b>Lavel :</b> {{ a.label }}<br>
@@ -585,7 +587,7 @@
         </td>
 
         <td *ngFor="let a of tuesdayClassRoomDetails4220">
-          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId)">
+          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId,'tuesday',a.roomNo)">
             <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
             <b>Course code:</b> {{a.courseCode }}<br>
             <b>Lavel :</b> {{ a.label }}<br>
@@ -616,7 +618,7 @@
           </div>
         </td>
         <td *ngFor="let a of wednesdayClassRoomDetails4514">
-          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId)">
+          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId,'wednesday',a.roomNo)">
             <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
             <b>Course code:</b> {{a.courseCode }}<br>
             <b>Label :</b> {{ a.label }}<br>
@@ -636,7 +638,7 @@
         </td>
 
         <td *ngFor="let a of wednesdayClassRoomDetails4204">
-          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId)">
+          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId,'wednesday',a.roomNo)">
             <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
             <b>Course code:</b> {{a.courseCode }}<br>
             <b>Lavel :</b> {{ a.label }}<br>
@@ -656,7 +658,7 @@
         </td>
 
         <td *ngFor="let a of wednesdayClassRoomDetails4503">
-          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId)">
+          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId,'wednesday',a.roomNo)">
             <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
             <b>Course code:</b> {{a.courseCode }}<br>
             <b>Lavel :</b> {{ a.label }}<br>
@@ -675,7 +677,7 @@
         </td>
 
         <td *ngFor="let a of wednesdayClassRoomDetails4602">
-          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId)">
+          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId,'wednesday',a.roomNo)">
             <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
             <b>Course code:</b> {{a.courseCode }}<br>
             <b>Lavel :</b> {{ a.label }}<br>
@@ -694,7 +696,7 @@
         </td>
 
         <td *ngFor="let a of wednesdayClassRoomDetails4604">
-          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId)">
+          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId,'wednesday',a.roomNo)">
             <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
             <b>Course code:</b> {{a.courseCode }}<br>
             <b>Lavel :</b> {{ a.label }}<br>
@@ -713,7 +715,7 @@
         </td>
 
         <td *ngFor="let a of wednesdayClassRoomDetails1103">
-          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId)">
+          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId,'wednesday',a.roomNo)">
             <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
             <b>Course code:</b> {{a.courseCode }}<br>
             <b>Lavel :</b> {{ a.label }}<br>
@@ -732,7 +734,7 @@
         </td>
 
         <td *ngFor="let a of wednesdayClassRoomDetails4220">
-          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId)">
+          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId,'wednesday',a.roomNo)">
             <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
             <b>Course code:</b> {{a.courseCode }}<br>
             <b>Lavel :</b> {{ a.label }}<br>
@@ -763,7 +765,7 @@
           </div>
         </td>
         <td *ngFor="let a of thursdayClassRoomDetails4514">
-          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId)">
+          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId,'thursday',a.roomNo)">
             <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
             <b>Course code:</b> {{a.courseCode }}<br>
             <b>Label :</b> {{ a.label }}<br>
@@ -783,7 +785,7 @@
         </td>
 
         <td *ngFor="let a of thursdayClassRoomDetails4204">
-          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId)">
+          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId,'thursday',a.roomNo)">
             <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
             <b>Course code:</b> {{a.courseCode }}<br>
             <b>Lavel :</b> {{ a.label }}<br>
@@ -803,7 +805,7 @@
         </td>
 
         <td *ngFor="let a of thursdayClassRoomDetails4503">
-          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId)">
+          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId,'thursday',a.roomNo)">
             <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
             <b>Course code:</b> {{a.courseCode }}<br>
             <b>Lavel :</b> {{ a.label }}<br>
@@ -822,7 +824,7 @@
         </td>
 
         <td *ngFor="let a of thursdayClassRoomDetails4602">
-          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId)">
+          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId,'thursday',a.roomNo)">
             <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
             <b>Course code:</b> {{a.courseCode }}<br>
             <b>Lavel :</b> {{ a.label }}<br>
@@ -841,7 +843,7 @@
         </td>
 
         <td *ngFor="let a of thursdayClassRoomDetails4604">
-          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId)">
+          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId,'thursday',a.roomNo)">
             <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
             <b>Course code:</b> {{a.courseCode }}<br>
             <b>Lavel :</b> {{ a.label }}<br>
@@ -860,7 +862,7 @@
         </td>
 
         <td *ngFor="let a of thursdayClassRoomDetails1103">
-          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId)">
+          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId,'thursday',a.roomNo)">
             <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
             <b>Course code:</b> {{a.courseCode }}<br>
             <b>Lavel :</b> {{ a.label }}<br>
@@ -879,7 +881,7 @@
         </td>
 
         <td *ngFor="let a of thursdayClassRoomDetails4220">
-          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId)">
+          <div (click)="setMyClass(a.classDetailsId,a.facultyMemberEmployeeId,'thursday',a.roomNo)">
             <p class="text-center colors text-white"><b> {{ a.startTime + ' - ' + a.endTime }}</b></p>
             <b>Course code:</b> {{a.courseCode }}<br>
             <b>Lavel :</b> {{ a.label }}<br>
@@ -894,3 +896,4 @@
 
 
   </div>
+</div>
