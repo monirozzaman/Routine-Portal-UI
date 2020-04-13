@@ -8,4 +8,7 @@ export class ClassRoom {
   section: string;
   facultyMember: string;
   facultyMemberEmployeeId: string;
+  routineEffectiveDate: string;
+  routineVersion: string;
+  routineSemester: string;
 }

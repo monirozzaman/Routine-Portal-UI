@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {RoutineService} from "../../services/routine.service";
 import {ClassRoom} from "../../model/class.room";
 import {Router} from "@angular/router";
+import {AuthService} from "../../services/auth.service";
 
 @Component({
   selector: 'app-dashboard-admin',
@@ -63,9 +64,12 @@ export class DashboardAdminComponent implements OnInit {
 
 
   timesArray: Array<any> = [];
+  routineSemester: string;
+  routineEffectiveDate: string;
+  routinePublishDate: string;
   daysArray: Array<String> = ["Saturday", 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday']
 
-  constructor(private dashboardAdminService: RoutineService, private router: Router) {
+  constructor(private dashboardAdminService: RoutineService, private router: Router, private  authService: AuthService) {
   }
 
   ngOnInit() {
@@ -81,8 +85,10 @@ export class DashboardAdminComponent implements OnInit {
 
   getClassDetails() {
     this.dashboardAdminService.getClassRoomDateAndTime().subscribe(res => {
+      this.routineSemester = res.routineSession;
+      this.routineEffectiveDate = res.routineEffectiveDate;
+      this.routinePublishDate = res.routinePublishDate;
       res.days.forEach(dayWise => {
-
         /*----------------------For Saturday--------------------------------*/
         dayWise.saturday.forEach(day => {
           if (day.roomNo === 'AB4-514') {
@@ -457,6 +463,15 @@ export class DashboardAdminComponent implements OnInit {
   addNewRoutine() {
     console.log("Console");
     this.router.navigate(['dashboard/create-new-routine'])
+  }
+
+  setMyClass(classId: string, creatorFacultyMemberEmployeeId: string) {
+    if (creatorFacultyMemberEmployeeId === this.authService.getLoggedEmployeeId() || creatorFacultyMemberEmployeeId === 'Not Occupied') {
+      console.log(classId);
+    } else {
+
+    }
+    console.log("404");
   }
 
 }

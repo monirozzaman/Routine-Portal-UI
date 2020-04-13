@@ -34,6 +34,9 @@ export class AuthService {
     return localStorage.getItem('token');
   }
 
+  getLoggedEmployeeId() {
+    return localStorage.getItem('token');
+  }
   public getAuthTokenScopes(): string[] {
 
     let jwtData = this.getAccessToken().split('.')[1];
