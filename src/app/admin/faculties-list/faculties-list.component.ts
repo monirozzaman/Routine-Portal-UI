@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {UserService} from "../../services/user.service";
 
 @Component({
   selector: 'app-faculties-list',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FacultiesListComponent implements OnInit {
 
-  constructor() { }
+  employeesList: Array<any>;
 
-  ngOnInit() {
+  constructor(private userService: UserService) {
   }
 
+  ngOnInit() {
+    this.getUserList();
+  }
+
+  getUserList() {
+    this.userService.getUserDetailsList().subscribe(res => {
+      this.employeesList = res;
+      console.log(this.employeesList);
+
+    }, error => {
+
+    });
+
+  }
 }

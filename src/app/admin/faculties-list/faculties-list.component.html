@@ -19,16 +19,16 @@
     </tr>
     </thead>
     <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
+    <tr *ngFor="let a of employeesList">
+      <td scope="row">{{ a.employeeId }}</td>
+      <td>{{ a.fullName}}</td>
+      <td>{{ a.teacherInitial }}</td>
+      <td>{{ a.department }}</td>
+      <td>{{ a.designation }}</td>
+      <td>{{ a.facultyType }}</td>
+      <td>{{ a.phoneNumber }}</td>
+      <td>{{ a.email }}</td>
+      <td>{{ a.joinDate }}</td>
 
     </tr>
 

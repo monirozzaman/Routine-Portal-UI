@@ -18,4 +18,10 @@ export class UserService {
     console.log(this.http.get(requestedApi));
     return this.http.get(requestedApi);
   }
+
+  getUserDetailsList(): Observable<any> {
+    const requestedApi = this.baseUrl + 'admin/faculties-list';
+    console.log(this.http.get(requestedApi));
+    return this.http.get(requestedApi);
+  }
 }
