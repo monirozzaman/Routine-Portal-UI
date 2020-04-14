@@ -26,6 +26,28 @@ export class AuthService {
 
   }
 
+  public signUp(fullName: string, teacherInitial: string, designation: string, dept: string, employeeId: string,
+                facultyLabel: string, phoneNumber: string, email: string, password: string): Observable<any> {
+
+    const loginUrl: string = this.baseUrl + 'sign-up';
+
+    const body = {
+      "fullName": fullName,
+      "teacherInitial": teacherInitial,
+      "designation": designation,
+      "department": dept,
+      "employeeId": employeeId,
+      "facultyType": facultyLabel,
+      "phoneNumber": phoneNumber,
+      "email": email,
+      "role": ["ROLE_PM"],
+      "password": password
+    }
+
+    return this.http.post(loginUrl, body);
+
+  }
+
   isLoggedIn() {
     return !!localStorage.getItem('token');
   }

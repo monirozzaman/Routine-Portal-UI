@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup} from "@angular/forms";
+import {AuthService} from "../../services/auth.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-add-faculties',
@@ -19,7 +21,7 @@ export class AddFacultiesComponent implements OnInit {
   email: string;
   password: string;
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, private authService: AuthService, private router: Router) {
   }
 
   ngOnInit() {
@@ -48,7 +50,13 @@ export class AddFacultiesComponent implements OnInit {
     this.email = this.addFaculties.controls['email'].value;
     this.password = this.addFaculties.controls['password'].value;
 
-    console.log(this.addFaculties.value);
+    this.authService.signUp(this.fullName, this.teacherInitial, this.designation, this.dept, this.employeeId,
+      this.facultyLabel, this.phoneNumber, this.email, this.password).subscribe(res => {
+      this.router.navigate(['dashboard/faculties-list']);
+    }, error => {
+      console.log(error);
+    })
+
 
   }
 }

@@ -10,6 +10,9 @@ import {AccessControlComponent} from "./admin/access-control/access-control.comp
 import {CreateRoutineComponent} from "./admin/create-routine/create-routine.component";
 import {AuthGuardServiceGuard} from "./services/auth-guard-service.guard";
 import {UpdateMyClassComponent} from "./update-my-class/update-my-class.component";
+import {MyRoutineComponent} from "./faculies/my-routine/my-routine.component";
+import {RoutineShowComponent} from "./faculies/routine-show/routine-show.component";
+import {AvailableRoomsComponent} from "./available-rooms/available-rooms.component";
 
 
 const routes: Routes = [
@@ -23,7 +26,10 @@ const routes: Routes = [
       {path: 'faculties-list', component: FacultiesListComponent, canActivate: [AuthGuardServiceGuard],},
       {path: 'access-control', component: AccessControlComponent, canActivate: [AuthGuardServiceGuard],},
       {path: 'create-new-routine', component: CreateRoutineComponent, canActivate: [AuthGuardServiceGuard],},
-      {path: 'update-my-class', component: UpdateMyClassComponent, canActivate: [AuthGuardServiceGuard],}
+      {path: 'update-my-class', component: UpdateMyClassComponent, canActivate: [AuthGuardServiceGuard],},
+      {path: 'my-routine', component: MyRoutineComponent, canActivate: [AuthGuardServiceGuard],},
+      {path: 'routine', component: RoutineShowComponent, canActivate: [AuthGuardServiceGuard],},
+      {path: 'available-rooms', component: AvailableRoomsComponent, canActivate: [AuthGuardServiceGuard],},
 
     ]
   },

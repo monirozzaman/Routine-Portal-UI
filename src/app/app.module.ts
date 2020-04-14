@@ -23,6 +23,8 @@ import {AuthInterceptorService} from "./services/auth-interceptor.service";
 import {ManuFacultiesPanelComponent} from './manu-faculties-panel/manu-faculties-panel.component';
 import {UpdateMyClassComponent} from './update-my-class/update-my-class.component';
 import {MyRoutineComponent} from "./faculies/my-routine/my-routine.component";
+import {RoutineShowComponent} from './faculies/routine-show/routine-show.component';
+import {AvailableRoomsComponent} from './available-rooms/available-rooms.component';
 
 
 @NgModule({
@@ -39,7 +41,9 @@ import {MyRoutineComponent} from "./faculies/my-routine/my-routine.component";
     CreateRoutineComponent,
     ManuFacultiesPanelComponent,
     UpdateMyClassComponent,
-    MyRoutineComponent
+    MyRoutineComponent,
+    RoutineShowComponent,
+    AvailableRoomsComponent
 
   ],
   imports: [

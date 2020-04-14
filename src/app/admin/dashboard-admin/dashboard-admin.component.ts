@@ -76,7 +76,7 @@ export class DashboardAdminComponent implements OnInit {
 
   ngOnInit() {
     this.getClassDetails();
-    //this.sortData();
+    this.show = false;
   }
 
   setClassSchedule(classIdentifier: string) {

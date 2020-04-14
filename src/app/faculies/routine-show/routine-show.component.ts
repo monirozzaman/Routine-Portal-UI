@@ -5,11 +5,11 @@ import {Router} from "@angular/router";
 import {AuthService} from "../../services/auth.service";
 
 @Component({
-  selector: 'app-my-routine',
-  templateUrl: './my-routine.component.html',
-  styleUrls: ['./my-routine.component.css']
+  selector: 'app-routine-show',
+  templateUrl: './routine-show.component.html',
+  styleUrls: ['./routine-show.component.css']
 })
-export class MyRoutineComponent implements OnInit {
+export class RoutineShowComponent implements OnInit {
 
   saturdayClassRoomDetails4514: Array<ClassRoom> = [];
   saturdayClassRoomDetails4204: Array<ClassRoom> = [];
@@ -76,7 +76,7 @@ export class MyRoutineComponent implements OnInit {
 
   ngOnInit() {
     this.getClassDetails();
-    //this.sortData();
+    this.show = false;
   }
 
   setClassSchedule(classIdentifier: string) {
@@ -94,7 +94,7 @@ export class MyRoutineComponent implements OnInit {
       res.days.forEach(dayWise => {
         /*----------------------For Saturday--------------------------------*/
         dayWise.saturday.forEach(day => {
-          if (day.roomNo === 'AB4-514' && day.facultyMemberEmployeeId === this.authService.getLoggedEmployeeId()) {
+          if (day.roomNo === 'AB4-514') {
             var timesOfClass = {
               startTime: day.startTime,
               endTime: day.endTime
@@ -102,7 +102,7 @@ export class MyRoutineComponent implements OnInit {
             this.saturdayClassRoomDetails4514.push(day);
             this.timesArray.push(timesOfClass);
           }
-          if (day.roomNo === 'AB4-204' && day.facultyMemberEmployeeId === this.authService.getLoggedEmployeeId()) {
+          if (day.roomNo === 'AB4-204') {
             var timesOfClass = {
               startTime: day.startTime,
               endTime: day.endTime
@@ -110,7 +110,7 @@ export class MyRoutineComponent implements OnInit {
             this.saturdayClassRoomDetails4204.push(day);
             this.timesArray.push(timesOfClass);
           }
-          if (day.roomNo === 'AB4-503' && day.facultyMemberEmployeeId === this.authService.getLoggedEmployeeId()) {
+          if (day.roomNo === 'AB4-503') {
             var timesOfClass = {
               startTime: day.startTime,
               endTime: day.endTime
@@ -118,7 +118,7 @@ export class MyRoutineComponent implements OnInit {
             this.saturdayClassRoomDetails4503.push(day);
             this.timesArray.push(timesOfClass);
           }
-          if (day.roomNo === 'AB4-602' && day.facultyMemberEmployeeId === this.authService.getLoggedEmployeeId()) {
+          if (day.roomNo === 'AB4-602') {
             var timesOfClass = {
               startTime: day.startTime,
               endTime: day.endTime
@@ -126,7 +126,7 @@ export class MyRoutineComponent implements OnInit {
             this.saturdayClassRoomDetails4602.push(day);
             this.timesArray.push(timesOfClass);
           }
-          if (day.roomNo === 'AB4-604' && day.facultyMemberEmployeeId === this.authService.getLoggedEmployeeId()) {
+          if (day.roomNo === 'AB4-604') {
             var timesOfClass = {
               startTime: day.startTime,
               endTime: day.endTime
@@ -134,7 +134,7 @@ export class MyRoutineComponent implements OnInit {
             this.saturdayClassRoomDetails4604.push(day);
             this.timesArray.push(timesOfClass);
           }
-          if (day.roomNo === 'AB1-103' && day.facultyMemberEmployeeId === this.authService.getLoggedEmployeeId()) {
+          if (day.roomNo === 'AB1-103') {
             var timesOfClass = {
               startTime: day.startTime,
               endTime: day.endTime
@@ -142,7 +142,7 @@ export class MyRoutineComponent implements OnInit {
             this.saturdayClassRoomDetails1103.push(day);
             this.timesArray.push(timesOfClass);
           }
-          if (day.roomNo === 'AB4-220' && day.facultyMemberEmployeeId === this.authService.getLoggedEmployeeId()) {
+          if (day.roomNo === 'AB4-220') {
             var timesOfClass = {
               startTime: day.startTime,
               endTime: day.endTime
@@ -155,7 +155,7 @@ export class MyRoutineComponent implements OnInit {
         /*----------------------For Sunday--------------------------------*/
         dayWise.sunday.forEach(day => {
 
-          if (day.roomNo === 'AB4-514' && day.facultyMemberEmployeeId === this.authService.getLoggedEmployeeId()) {
+          if (day.roomNo === 'AB4-514') {
             var timesOfClass = {
               startTime: day.startTime,
               endTime: day.endTime
@@ -163,7 +163,7 @@ export class MyRoutineComponent implements OnInit {
             this.sundayClassRoomDetails4514.push(day);
             this.timesArray.push(timesOfClass);
           }
-          if (day.roomNo === 'AB4-204' && day.facultyMemberEmployeeId === this.authService.getLoggedEmployeeId()) {
+          if (day.roomNo === 'AB4-204') {
             var timesOfClass = {
               startTime: day.startTime,
               endTime: day.endTime
@@ -171,7 +171,7 @@ export class MyRoutineComponent implements OnInit {
             this.sundayClassRoomDetails4204.push(day);
             this.timesArray.push(timesOfClass);
           }
-          if (day.roomNo === 'AB4-503' && day.facultyMemberEmployeeId === this.authService.getLoggedEmployeeId()) {
+          if (day.roomNo === 'AB4-503') {
             var timesOfClass = {
               startTime: day.startTime,
               endTime: day.endTime
@@ -179,7 +179,7 @@ export class MyRoutineComponent implements OnInit {
             this.sundayClassRoomDetails4503.push(day);
             this.timesArray.push(timesOfClass);
           }
-          if (day.roomNo === 'AB4-602' && day.facultyMemberEmployeeId === this.authService.getLoggedEmployeeId()) {
+          if (day.roomNo === 'AB4-602') {
             var timesOfClass = {
               startTime: day.startTime,
               endTime: day.endTime
@@ -187,7 +187,7 @@ export class MyRoutineComponent implements OnInit {
             this.sundayClassRoomDetails4602.push(day);
             this.timesArray.push(timesOfClass);
           }
-          if (day.roomNo === 'AB4-604' && day.facultyMemberEmployeeId === this.authService.getLoggedEmployeeId()) {
+          if (day.roomNo === 'AB4-604') {
             var timesOfClass = {
               startTime: day.startTime,
               endTime: day.endTime
@@ -195,7 +195,7 @@ export class MyRoutineComponent implements OnInit {
             this.sundayClassRoomDetails4604.push(day);
             this.timesArray.push(timesOfClass);
           }
-          if (day.roomNo === 'AB1-103' && day.facultyMemberEmployeeId === this.authService.getLoggedEmployeeId()) {
+          if (day.roomNo === 'AB1-103') {
             var timesOfClass = {
               startTime: day.startTime,
               endTime: day.endTime
@@ -203,7 +203,7 @@ export class MyRoutineComponent implements OnInit {
             this.sundayClassRoomDetails1103.push(day);
             this.timesArray.push(timesOfClass);
           }
-          if (day.roomNo === 'AB4-220' && day.facultyMemberEmployeeId === this.authService.getLoggedEmployeeId()) {
+          if (day.roomNo === 'AB4-220') {
             var timesOfClass = {
               startTime: day.startTime,
               endTime: day.endTime
@@ -215,7 +215,7 @@ export class MyRoutineComponent implements OnInit {
 
         /*----------------------For Monday--------------------------------*/
         dayWise.monday.forEach(day => {
-          if (day.roomNo === 'AB4-514' && day.facultyMemberEmployeeId === this.authService.getLoggedEmployeeId()) {
+          if (day.roomNo === 'AB4-514') {
             var timesOfClass = {
               startTime: day.startTime,
               endTime: day.endTime
@@ -223,7 +223,7 @@ export class MyRoutineComponent implements OnInit {
             this.mondayClassRoomDetails4514.push(day);
             this.timesArray.push(timesOfClass);
           }
-          if (day.roomNo === 'AB4-204' && day.facultyMemberEmployeeId === this.authService.getLoggedEmployeeId()) {
+          if (day.roomNo === 'AB4-204') {
             var timesOfClass = {
               startTime: day.startTime,
               endTime: day.endTime
@@ -231,7 +231,7 @@ export class MyRoutineComponent implements OnInit {
             this.mondayClassRoomDetails4204.push(day);
             this.timesArray.push(timesOfClass);
           }
-          if (day.roomNo === 'AB4-503' && day.facultyMemberEmployeeId === this.authService.getLoggedEmployeeId()) {
+          if (day.roomNo === 'AB4-503') {
             var timesOfClass = {
               startTime: day.startTime,
               endTime: day.endTime
@@ -239,7 +239,7 @@ export class MyRoutineComponent implements OnInit {
             this.mondayClassRoomDetails4503.push(day);
             this.timesArray.push(timesOfClass);
           }
-          if (day.roomNo === 'AB4-602' && day.facultyMemberEmployeeId === this.authService.getLoggedEmployeeId()) {
+          if (day.roomNo === 'AB4-602') {
             var timesOfClass = {
               startTime: day.startTime,
               endTime: day.endTime
@@ -247,7 +247,7 @@ export class MyRoutineComponent implements OnInit {
             this.mondayClassRoomDetails4602.push(day);
             this.timesArray.push(timesOfClass);
           }
-          if (day.roomNo === 'AB4-604' && day.facultyMemberEmployeeId === this.authService.getLoggedEmployeeId()) {
+          if (day.roomNo === 'AB4-604') {
             var timesOfClass = {
               startTime: day.startTime,
               endTime: day.endTime
@@ -255,7 +255,7 @@ export class MyRoutineComponent implements OnInit {
             this.mondayClassRoomDetails4604.push(day);
             this.timesArray.push(timesOfClass);
           }
-          if (day.roomNo === 'AB1-103' && day.facultyMemberEmployeeId === this.authService.getLoggedEmployeeId()) {
+          if (day.roomNo === 'AB1-103') {
             var timesOfClass = {
               startTime: day.startTime,
               endTime: day.endTime
@@ -263,7 +263,7 @@ export class MyRoutineComponent implements OnInit {
             this.mondayClassRoomDetails1103.push(day);
             this.timesArray.push(timesOfClass);
           }
-          if (day.roomNo === 'AB4-220' && day.facultyMemberEmployeeId === this.authService.getLoggedEmployeeId()) {
+          if (day.roomNo === 'AB4-220') {
             var timesOfClass = {
               startTime: day.startTime,
               endTime: day.endTime
@@ -275,7 +275,7 @@ export class MyRoutineComponent implements OnInit {
 
         /*----------------------For Tuesday--------------------------------*/
         dayWise.tuesday.forEach(day => {
-          if (day.roomNo === 'AB4-514' && day.facultyMemberEmployeeId === this.authService.getLoggedEmployeeId()) {
+          if (day.roomNo === 'AB4-514') {
             var timesOfClass = {
               startTime: day.startTime,
               endTime: day.endTime
@@ -283,7 +283,7 @@ export class MyRoutineComponent implements OnInit {
             this.tuesdayClassRoomDetails4514.push(day);
             this.timesArray.push(timesOfClass);
           }
-          if (day.roomNo === 'AB4-204' && day.facultyMemberEmployeeId === this.authService.getLoggedEmployeeId()) {
+          if (day.roomNo === 'AB4-204') {
             var timesOfClass = {
               startTime: day.startTime,
               endTime: day.endTime
@@ -291,7 +291,7 @@ export class MyRoutineComponent implements OnInit {
             this.tuesdayClassRoomDetails4204.push(day);
             this.timesArray.push(timesOfClass);
           }
-          if (day.roomNo === 'AB4-503' && day.facultyMemberEmployeeId === this.authService.getLoggedEmployeeId()) {
+          if (day.roomNo === 'AB4-503') {
             var timesOfClass = {
               startTime: day.startTime,
               endTime: day.endTime
@@ -299,7 +299,7 @@ export class MyRoutineComponent implements OnInit {
             this.tuesdayClassRoomDetails4503.push(day);
             this.timesArray.push(timesOfClass);
           }
-          if (day.roomNo === 'AB4-602' && day.facultyMemberEmployeeId === this.authService.getLoggedEmployeeId()) {
+          if (day.roomNo === 'AB4-602') {
             var timesOfClass = {
               startTime: day.startTime,
               endTime: day.endTime
@@ -307,7 +307,7 @@ export class MyRoutineComponent implements OnInit {
             this.tuesdayClassRoomDetails4602.push(day);
             this.timesArray.push(timesOfClass);
           }
-          if (day.roomNo === 'AB4-604' && day.facultyMemberEmployeeId === this.authService.getLoggedEmployeeId()) {
+          if (day.roomNo === 'AB4-604') {
             var timesOfClass = {
               startTime: day.startTime,
               endTime: day.endTime
@@ -315,7 +315,7 @@ export class MyRoutineComponent implements OnInit {
             this.tuesdayClassRoomDetails4604.push(day);
             this.timesArray.push(timesOfClass);
           }
-          if (day.roomNo === 'AB1-103' && day.facultyMemberEmployeeId === this.authService.getLoggedEmployeeId()) {
+          if (day.roomNo === 'AB1-103') {
             var timesOfClass = {
               startTime: day.startTime,
               endTime: day.endTime
@@ -323,7 +323,7 @@ export class MyRoutineComponent implements OnInit {
             this.tuesdayClassRoomDetails1103.push(day);
             this.timesArray.push(timesOfClass);
           }
-          if (day.roomNo === 'AB4-220' && day.facultyMemberEmployeeId === this.authService.getLoggedEmployeeId()) {
+          if (day.roomNo === 'AB4-220') {
             var timesOfClass = {
               startTime: day.startTime,
               endTime: day.endTime
@@ -335,7 +335,7 @@ export class MyRoutineComponent implements OnInit {
 
         /*----------------------For Wednesday--------------------------------*/
         dayWise.wednesday.forEach(day => {
-          if (day.roomNo === 'AB4-514' && day.facultyMemberEmployeeId === this.authService.getLoggedEmployeeId()) {
+          if (day.roomNo === 'AB4-514') {
             var timesOfClass = {
               startTime: day.startTime,
               endTime: day.endTime
@@ -343,7 +343,7 @@ export class MyRoutineComponent implements OnInit {
             this.wednesdayClassRoomDetails4514.push(day);
             this.timesArray.push(timesOfClass);
           }
-          if (day.roomNo === 'AB4-204' && day.facultyMemberEmployeeId === this.authService.getLoggedEmployeeId()) {
+          if (day.roomNo === 'AB4-204') {
             var timesOfClass = {
               startTime: day.startTime,
               endTime: day.endTime
@@ -351,7 +351,7 @@ export class MyRoutineComponent implements OnInit {
             this.wednesdayClassRoomDetails4204.push(day);
             this.timesArray.push(timesOfClass);
           }
-          if (day.roomNo === 'AB4-503' && day.facultyMemberEmployeeId === this.authService.getLoggedEmployeeId()) {
+          if (day.roomNo === 'AB4-503') {
             var timesOfClass = {
               startTime: day.startTime,
               endTime: day.endTime
@@ -359,7 +359,7 @@ export class MyRoutineComponent implements OnInit {
             this.wednesdayClassRoomDetails4503.push(day);
             this.timesArray.push(timesOfClass);
           }
-          if (day.roomNo === 'AB4-602' && day.facultyMemberEmployeeId === this.authService.getLoggedEmployeeId()) {
+          if (day.roomNo === 'AB4-602') {
             var timesOfClass = {
               startTime: day.startTime,
               endTime: day.endTime
@@ -367,7 +367,7 @@ export class MyRoutineComponent implements OnInit {
             this.wednesdayClassRoomDetails4602.push(day);
             this.timesArray.push(timesOfClass);
           }
-          if (day.roomNo === 'AB4-604' && day.facultyMemberEmployeeId === this.authService.getLoggedEmployeeId()) {
+          if (day.roomNo === 'AB4-604') {
             var timesOfClass = {
               startTime: day.startTime,
               endTime: day.endTime
@@ -375,7 +375,7 @@ export class MyRoutineComponent implements OnInit {
             this.wednesdayClassRoomDetails4604.push(day);
             this.timesArray.push(timesOfClass);
           }
-          if (day.roomNo === 'AB1-103' && day.facultyMemberEmployeeId === this.authService.getLoggedEmployeeId()) {
+          if (day.roomNo === 'AB1-103') {
             var timesOfClass = {
               startTime: day.startTime,
               endTime: day.endTime
@@ -383,7 +383,7 @@ export class MyRoutineComponent implements OnInit {
             this.wednesdayClassRoomDetails1103.push(day);
             this.timesArray.push(timesOfClass);
           }
-          if (day.roomNo === 'AB4-220' && day.facultyMemberEmployeeId === this.authService.getLoggedEmployeeId()) {
+          if (day.roomNo === 'AB4-220') {
             var timesOfClass = {
               startTime: day.startTime,
               endTime: day.endTime
@@ -395,7 +395,7 @@ export class MyRoutineComponent implements OnInit {
         /*----------------------For Thursday--------------------------------*/
 
         dayWise.thursday.forEach(day => {
-          if (day.roomNo === 'AB4-514' && day.facultyMemberEmployeeId === this.authService.getLoggedEmployeeId()) {
+          if (day.roomNo === 'AB4-514') {
             var timesOfClass = {
               startTime: day.startTime,
               endTime: day.endTime
@@ -403,7 +403,7 @@ export class MyRoutineComponent implements OnInit {
             this.thursdayClassRoomDetails4514.push(day);
             this.timesArray.push(timesOfClass);
           }
-          if (day.roomNo === 'AB4-204' && day.facultyMemberEmployeeId === this.authService.getLoggedEmployeeId()) {
+          if (day.roomNo === 'AB4-204') {
             var timesOfClass = {
               startTime: day.startTime,
               endTime: day.endTime
@@ -411,7 +411,7 @@ export class MyRoutineComponent implements OnInit {
             this.thursdayClassRoomDetails4204.push(day);
             this.timesArray.push(timesOfClass);
           }
-          if (day.roomNo === 'AB4-503' && day.facultyMemberEmployeeId === this.authService.getLoggedEmployeeId()) {
+          if (day.roomNo === 'AB4-503') {
             var timesOfClass = {
               startTime: day.startTime,
               endTime: day.endTime
@@ -419,7 +419,7 @@ export class MyRoutineComponent implements OnInit {
             this.thursdayClassRoomDetails4503.push(day);
             this.timesArray.push(timesOfClass);
           }
-          if (day.roomNo === 'AB4-602' && day.facultyMemberEmployeeId === this.authService.getLoggedEmployeeId()) {
+          if (day.roomNo === 'AB4-602') {
             var timesOfClass = {
               startTime: day.startTime,
               endTime: day.endTime
@@ -427,7 +427,7 @@ export class MyRoutineComponent implements OnInit {
             this.thursdayClassRoomDetails4602.push(day);
             this.timesArray.push(timesOfClass);
           }
-          if (day.roomNo === 'AB4-604' && day.facultyMemberEmployeeId === this.authService.getLoggedEmployeeId()) {
+          if (day.roomNo === 'AB4-604') {
             var timesOfClass = {
               startTime: day.startTime,
               endTime: day.endTime
@@ -435,7 +435,7 @@ export class MyRoutineComponent implements OnInit {
             this.thursdayClassRoomDetails4604.push(day);
             this.timesArray.push(timesOfClass);
           }
-          if (day.roomNo === 'AB1-103' && day.facultyMemberEmployeeId === this.authService.getLoggedEmployeeId()) {
+          if (day.roomNo === 'AB1-103') {
             var timesOfClass = {
               startTime: day.startTime,
               endTime: day.endTime
@@ -443,7 +443,7 @@ export class MyRoutineComponent implements OnInit {
             this.thursdayClassRoomDetails1103.push(day);
             this.timesArray.push(timesOfClass);
           }
-          if (day.roomNo === 'AB4-220' && day.facultyMemberEmployeeId === this.authService.getLoggedEmployeeId()) {
+          if (day.roomNo === 'AB4-220') {
             var timesOfClass = {
               startTime: day.startTime,
               endTime: day.endTime
@@ -460,6 +460,7 @@ export class MyRoutineComponent implements OnInit {
     // Remove multiple value
     //this.saturdayClassRoomDetails=  Object.values(this.saturdayClassRoomDetails.reduce((previousValue, currentValue) => Object.assign(previousValue,{[currentValue.startTime]: currentValue}),{}));
     console.log(this.saturdayClassRoomDetails4514);
+
   }
 
   setMyClass(classId: string, creatorFacultyMemberEmployeeId: string, day: string, roomNo: string) {
@@ -473,4 +474,5 @@ export class MyRoutineComponent implements OnInit {
     }
     console.log("404");
   }
+
 }

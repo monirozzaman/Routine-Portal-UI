@@ -6,19 +6,19 @@
   <div class="sidebar-wrapper">
     <ul class="nav">
       <li class="nav-item">
-        <a [routerLink]="['admin']" class="nav-link">
+        <a [routerLink]="['routine']" class="nav-link">
           <i class="material-icons">dashboard</i>
           <p class="text-black-50">Class Routine</p>
         </a>
       </li>
       <li class="nav-item ">
-        <a [routerLink]="['access-control']" class="nav-link">
+        <a [routerLink]="['my-routine']" class="nav-link">
           <i class="fas fa-universal-access"></i>
           <p>My Routine</p>
         </a>
       </li>
       <li class="nav-item ">
-        <a [routerLink]="['add-faculties']" class="nav-link">
+        <a [routerLink]="['available-rooms']" class="nav-link">
           <i class="material-icons">library_books</i>
           <p>Available Rooms </p>
         </a>
@@ -31,7 +31,7 @@
       </li>
 
       <li class="nav-item ">
-        <a [routerLink]="['']" class="nav-link">
+        <a (click)="logout()" class="nav-link">
           <i class="material-icons">bubble_chart</i>
           <p>Logout</p>
         </a>

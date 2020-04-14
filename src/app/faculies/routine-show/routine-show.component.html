@@ -5,13 +5,7 @@
       <p><span class="text-secondary font-weight-bold">Publish Date:</span> {{ routinePublishDate }} | <small
         class="text-secondary font-weight-bold">Effective Date:</small> {{ routineEffectiveDate }}</p>
     </div>
-    <div class="mb-3 text-right">
-      <div class="btn-group">
-        <button (click)="addNewRoutine()" class="btn btn-success" type="button">Add New Routine</button>
-        <button class="btn btn-warning" type="button">Update</button>
-        <button class="btn btn-danger" type="button">Delete</button>
-      </div>
-    </div>
+
     <div *ngIf="show" class="alert alert-warning" role="alert">
       Sorry ,This slot Already Taken.Let's see another one...
     </div>

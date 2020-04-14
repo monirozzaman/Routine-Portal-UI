@@ -29,6 +29,9 @@ th {
   background-color: rgba(54, 182, 111, 0.66);
 }
 
+.bgWhite {
+  background-color: #ffffff;
+}
 .plusIcon {
   color: #36b66f;
 }
