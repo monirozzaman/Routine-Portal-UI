@@ -1,18 +1,18 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {LoginComponent} from "./login/login.component";
-import {DashboardComponent} from "./dashboard/dashboard.component";
-import {ProfileComponent} from "./profile/profile.component";
-import {DashboardAdminComponent} from "./admin/dashboard-admin/dashboard-admin.component";
-import {AddFacultiesComponent} from "./admin/add-faculties/add-faculties.component";
-import {FacultiesListComponent} from "./admin/faculties-list/faculties-list.component";
-import {AccessControlComponent} from "./admin/access-control/access-control.component";
-import {CreateRoutineComponent} from "./admin/create-routine/create-routine.component";
+import {LoginComponent} from "./component/globel/login/login.component";
+import {DashboardComponent} from "./component/globel/dashboard/dashboard.component";
+import {ProfileComponent} from "./component/globel/profile/profile.component";
+import {DashboardAdminComponent} from "./component/admin/dashboard-admin/dashboard-admin.component";
+import {AddFacultiesComponent} from "./component/admin/add-faculties/add-faculties.component";
+import {FacultiesListComponent} from "./component/admin/faculties-list/faculties-list.component";
+import {AccessControlComponent} from "./component/admin/access-control/access-control.component";
+import {CreateRoutineComponent} from "./component/admin/create-routine/create-routine.component";
 import {AuthGuardServiceGuard} from "./services/auth-guard-service.guard";
-import {UpdateMyClassComponent} from "./update-my-class/update-my-class.component";
-import {MyRoutineComponent} from "./faculies/my-routine/my-routine.component";
-import {RoutineShowComponent} from "./faculies/routine-show/routine-show.component";
-import {AvailableRoomsComponent} from "./available-rooms/available-rooms.component";
+import {UpdateMyClassComponent} from "./component/faculties/update-my-class/update-my-class.component";
+import {MyRoutineComponent} from "./component/faculties/my-routine/my-routine.component";
+import {RoutineShowComponent} from "./component/faculties/routine-show/routine-show.component";
+import {AvailableRoomsComponent} from "./component/faculties/available-rooms/available-rooms.component";
 
 
 const routes: Routes = [
